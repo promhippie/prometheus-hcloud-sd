@@ -48,9 +48,6 @@ PROMETHEUS_HCLOUD_LOG_LEVEL
 PROMETHEUS_HCLOUD_LOG_PRETTY
 : Enable pretty messages for logging, defaults to `true`
 
-PROMETHEUS_HCLOUD_LOG_COLOR
-: Enable color output for logging, defaults to `false`
-
 PROMETHEUS_HCLOUD_WEB_ADDRESS
 : Address to bind the metrics server, defaults to `0.0.0.0:9000`
 

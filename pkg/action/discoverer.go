@@ -29,8 +29,8 @@ const (
 	locationNameLabel      = hcloudPrefix + "location"
 	locationCityLabel      = hcloudPrefix + "city"
 	locationCountryLabel   = hcloudPrefix + "country"
-	imageNameLabel         = hcloudPrefix + "image_name"
 	imageTypeLabel         = hcloudPrefix + "image_type"
+	imageNameLabel         = hcloudPrefix + "image_name"
 	osFlavorLabel          = hcloudPrefix + "os_flavor"
 	osVersionLabel         = hcloudPrefix + "os_version"
 )
@@ -69,6 +69,11 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 	requestDuration.Observe(time.Since(now).Seconds())
 
 	if err != nil {
+		level.Warn(d.logger).Log(
+			"msg", "Failed to fetch servers",
+			"err", err,
+		)
+
 		requestFailures.Inc()
 		return nil, err
 	}
@@ -82,6 +87,20 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 	targets := make([]*targetgroup.Group, len(servers))
 
 	for _, server := range servers {
+		var (
+			imageType string
+			imageName string
+			osFlavor  string
+			osVersion string
+		)
+
+		if server.Image != nil {
+			imageType = string(server.Image.Type)
+			imageName = server.Image.Name
+			osFlavor = server.Image.OSFlavor
+			osVersion = server.Image.OSVersion
+		}
+
 		target := &targetgroup.Group{
 			Source: fmt.Sprintf("hcloud/%d", server.ID),
 			Targets: []model.LabelSet{
@@ -105,10 +124,10 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 				model.LabelName(locationNameLabel):      model.LabelValue(server.Datacenter.Location.Name),
 				model.LabelName(locationCityLabel):      model.LabelValue(server.Datacenter.Location.City),
 				model.LabelName(locationCountryLabel):   model.LabelValue(server.Datacenter.Location.Country),
-				model.LabelName(imageNameLabel):         model.LabelValue(server.Image.Name),
-				model.LabelName(imageTypeLabel):         model.LabelValue(server.Image.Type),
-				model.LabelName(osFlavorLabel):          model.LabelValue(server.Image.OSFlavor),
-				model.LabelName(osVersionLabel):         model.LabelValue(server.Image.OSVersion),
+				model.LabelName(imageTypeLabel):         model.LabelValue(imageType),
+				model.LabelName(imageNameLabel):         model.LabelValue(imageName),
+				model.LabelName(osFlavorLabel):          model.LabelValue(osFlavor),
+				model.LabelName(osVersionLabel):         model.LabelValue(osVersion),
 			},
 		}
 

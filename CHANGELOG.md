@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed
+
+* Switch to cloud.drone.io for CI
+
+## [0.2.0] - 2019-01-12
+
 ### Fixed
 
 * Only define server image label if it got one

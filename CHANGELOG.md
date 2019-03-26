@@ -5,7 +5,11 @@
 ### Changed
 
 * Switch to cloud.drone.io for CI
+
+### Added
+
 * Add support for server labels
+* Support multiple credentials and config file
 
 ## [0.2.0] - 2019-01-12
 

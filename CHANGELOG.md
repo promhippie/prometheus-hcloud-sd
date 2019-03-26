@@ -5,6 +5,7 @@
 ### Changed
 
 * Switch to cloud.drone.io for CI
+* Add support for server labels
 
 ## [0.2.0] - 2019-01-12
 

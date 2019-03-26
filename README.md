@@ -1,6 +1,6 @@
 # Prometheus HetznerCloud SD
 
-[![Build Status](http://github.dronehippie.de/api/badges/promhippie/prometheus-hcloud-sd/status.svg)](http://github.dronehippie.de/promhippie/prometheus-hcloud-sd)
+[![Build Status](http://cloud.drone.io/api/badges/promhippie/prometheus-hcloud-sd/status.svg)](http://cloud.drone.io/promhippie/prometheus-hcloud-sd)
 [![Stories in Ready](https://badge.waffle.io/promhippie/prometheus-hcloud-sd.svg?label=ready&title=Ready)](http://waffle.io/promhippie/prometheus-hcloud-sd)
 [![Join the Matrix chat at https://matrix.to/#/#webhippie:matrix.org](https://img.shields.io/badge/matrix-%23webhippie-7bc9a4.svg)](https://matrix.to/#/#webhippie:matrix.org)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d7900c4c246740edb77cf29a4b1d85ee)](https://www.codacy.com/app/promhippie/prometheus-hcloud-sd?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=promhippie/prometheus-hcloud-sd&amp;utm_campaign=Badge_Grade)

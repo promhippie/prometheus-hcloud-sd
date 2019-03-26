@@ -18,6 +18,9 @@ var (
 
 	// ErrMissingHcloudToken defines the error if hcloud.token is empty.
 	ErrMissingHcloudToken = errors.New("Missing required hcloud.token")
+
+	// ErrMissingAnyCredentials defines the error if no credentials are provided.
+	ErrMissingAnyCredentials = errors.New("Missing any credentials")
 )
 
 func main() {
@@ -87,15 +90,31 @@ func main() {
 						Destination: &cfg.Target.Refresh,
 					},
 					&cli.StringFlag{
-						Name:        "hcloud.token",
-						Value:       "",
-						Usage:       "Access token for the HetznerCloud API",
-						EnvVars:     []string{"PROMETHEUS_HCLOUD_TOKEN"},
-						Destination: &cfg.Target.Token,
+						Name:    "hcloud.token",
+						Value:   "",
+						Usage:   "Access token for the HetznerCloud API",
+						EnvVars: []string{"PROMETHEUS_HCLOUD_TOKEN"},
+					},
+					&cli.StringFlag{
+						Name:    "hcloud.config",
+						Value:   "",
+						Usage:   "Path to HetznerCloud configuration file",
+						EnvVars: []string{"PROMETHEUS_HCLOUD_CONFIG"},
 					},
 				},
 				Action: func(c *cli.Context) error {
 					logger := setupLogger(cfg)
+
+					if c.IsSet("hcloud.config") {
+						if err := readConfig(c.String("hcloud.config"), cfg); err != nil {
+							level.Error(logger).Log(
+								"msg", "Failed to read config",
+								"err", err,
+							)
+
+							return err
+						}
+					}
 
 					if cfg.Target.File == "" {
 						level.Error(logger).Log(
@@ -105,12 +124,32 @@ func main() {
 						return ErrMissingOutputFile
 					}
 
-					if cfg.Target.Token == "" {
-						level.Error(logger).Log(
-							"msg", ErrMissingHcloudToken,
+					if c.IsSet("hcloud.token") {
+						credentials := config.Credential{
+							Project: "default",
+							Token:   c.String("hcloud.token"),
+						}
+
+						cfg.Target.Credentials = append(
+							cfg.Target.Credentials,
+							credentials,
 						)
 
-						return ErrMissingHcloudToken
+						if credentials.Token == "" {
+							level.Error(logger).Log(
+								"msg", ErrMissingHcloudToken,
+							)
+
+							return ErrMissingHcloudToken
+						}
+					}
+
+					if len(cfg.Target.Credentials) == 0 {
+						level.Error(logger).Log(
+							"msg", ErrMissingAnyCredentials,
+						)
+
+						return ErrMissingAnyCredentials
 					}
 
 					return action.Server(cfg, logger)

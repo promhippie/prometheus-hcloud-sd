@@ -34,15 +34,18 @@ func Server(cfg *config.Config, logger log.Logger) error {
 
 	{
 		ctx := context.Background()
+		clients := make(map[string]*hcloud.Client, len(cfg.Target.Credentials))
 
-		client := hcloud.NewClient(
-			hcloud.WithToken(
-				cfg.Target.Token,
-			),
-		)
+		for _, credential := range cfg.Target.Credentials {
+			clients[credential.Project] = hcloud.NewClient(
+				hcloud.WithToken(
+					credential.Token,
+				),
+			)
+		}
 
 		disc := Discoverer{
-			client:    client,
+			clients:   clients,
 			logger:    logger,
 			refresh:   cfg.Target.Refresh,
 			separator: ",",

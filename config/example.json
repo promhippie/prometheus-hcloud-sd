@@ -1,0 +1,28 @@
+{
+	"server": {
+		"addr": "0.0.0.0:9000",
+		"path": "/metrics"
+	},
+	"logs": {
+		"level": "error",
+		"pretty": false
+	},
+	"target": {
+		"file": "/etc/prometheus/hcloud.json",
+		"refresh": 30,
+		"credentials": [
+			{
+				"project": "example1",
+				"token": "uAgX6TkZVGx7c94jPAff5cfJdym9MLekiveDgN7Oq5dyOXxl4Uu9qkpcC1muILGW"
+			},
+			{
+				"project": "example2",
+				"token": "UhgX6TkZVGx7c94jPAff5cfJdyc9MLekiveDgN7Oq5dyOXxl4Uu9qkpcD1muILGW"
+			},
+			{
+				"project": "example3",
+				"token": "aBgX6TkZVGx7c94jPAff5cfJdym9MLekivdDgN7Oq5dyOXxl4Uu9qkpcU1muILGW"
+			}
+		]
+	}
+}

@@ -33,14 +33,16 @@ const (
 	imageNameLabel         = hcloudPrefix + "image_name"
 	osFlavorLabel          = hcloudPrefix + "os_flavor"
 	osVersionLabel         = hcloudPrefix + "os_version"
+	labelPrefix            = hcloudPrefix + "label_"
 )
 
 // Discoverer implements the Prometheus discoverer interface.
 type Discoverer struct {
-	client  *hcloud.Client
-	logger  log.Logger
-	refresh int
-	lasts   map[string]struct{}
+	client    *hcloud.Client
+	logger    log.Logger
+	refresh   int
+	separator string
+	lasts     map[string]struct{}
 }
 
 // Run initializes fetching the targets for service discovery.
@@ -129,6 +131,10 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 				model.LabelName(osFlavorLabel):          model.LabelValue(osFlavor),
 				model.LabelName(osVersionLabel):         model.LabelValue(osVersion),
 			},
+		}
+
+		for key, value := range server.Labels {
+			target.Labels[model.LabelName(labelPrefix+key)] = model.LabelValue(value)
 		}
 
 		level.Debug(d.logger).Log(

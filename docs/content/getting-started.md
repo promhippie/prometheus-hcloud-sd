@@ -80,6 +80,7 @@ PROMETHEUS_HCLOUD_OUTPUT_REFRESH
 * `__meta_hcloud_image_type`
 * `__meta_hcloud_os_flavor`
 * `__meta_hcloud_os_version`
+* `__meta_hcloud_label_<label>`
 
 ## Metrics
 

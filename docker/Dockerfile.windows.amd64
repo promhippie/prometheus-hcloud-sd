@@ -8,5 +8,6 @@ LABEL maintainer="Thomas Boerger <thomas@webhippie.de>" `
 
 ENTRYPOINT ["c:\\prometheus-hcloud-sd.exe"]
 CMD ["server"]
+HEALTHCHECK CMD ["c:\\prometheus-hcloud-sd.exe", "health"]
 
 COPY bin/prometheus-hcloud-sd.exe c:\prometheus-hcloud-sd.exe

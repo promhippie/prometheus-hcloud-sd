@@ -63,9 +63,9 @@ fmt:
 vet:
 	go vet $(PACKAGES)
 
-.PHONY: megacheck
-megacheck:
-	retool do megacheck $(PACKAGES)
+.PHONY: staticcheck
+staticcheck:
+	retool do staticcheck $(PACKAGES)
 
 .PHONY: lint
 lint:

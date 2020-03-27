@@ -39,7 +39,7 @@ steps:
     CGO_ENABLED: 0
     GOPATH: /srv/app
   commands:
-  - make megacheck
+  - make staticcheck
 
 - name: app-lint
   image: webhippie/golang:1.10

@@ -84,7 +84,7 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 			)
 
 			requestFailures.WithLabelValues(project).Inc()
-			return nil, err
+			continue
 		}
 
 		level.Debug(d.logger).Log(

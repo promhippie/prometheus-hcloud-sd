@@ -14,4 +14,4 @@ CMD ["server"]
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /etc/mime.types /etc/
 
-COPY dist/binaries/prometheus-hcloud-sd-*-linux-amd64 /usr/bin/prometheus-hcloud-sd
+COPY bin/prometheus-hcloud-sd /usr/bin/prometheus-hcloud-sd

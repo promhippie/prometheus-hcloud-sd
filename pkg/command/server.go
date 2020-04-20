@@ -1,4 +1,4 @@
-package main
+package command
 
 import (
 	"errors"
@@ -6,18 +6,7 @@ import (
 	"github.com/go-kit/kit/log/level"
 	"github.com/promhippie/prometheus-hcloud-sd/pkg/action"
 	"github.com/promhippie/prometheus-hcloud-sd/pkg/config"
-	"gopkg.in/urfave/cli.v2"
-)
-
-var (
-	// ErrMissingOutputFile defines the error if output.file is empty.
-	ErrMissingOutputFile = errors.New("Missing path for output.file")
-
-	// ErrMissingHcloudToken defines the error if hcloud.token is empty.
-	ErrMissingHcloudToken = errors.New("Missing required hcloud.token")
-
-	// ErrMissingAnyCredentials defines the error if no credentials are provided.
-	ErrMissingAnyCredentials = errors.New("Missing any credentials")
+	"github.com/urfave/cli/v2"
 )
 
 // Server provides the sub-command to start the server.
@@ -83,10 +72,10 @@ func Server(cfg *config.Config) *cli.Command {
 
 			if cfg.Target.File == "" {
 				level.Error(logger).Log(
-					"msg", ErrMissingOutputFile,
+					"msg", "Missing path for output.file",
 				)
 
-				return ErrMissingOutputFile
+				return errors.New("missing path for output.file")
 			}
 
 			if c.IsSet("hcloud.token") {
@@ -102,19 +91,19 @@ func Server(cfg *config.Config) *cli.Command {
 
 				if credentials.Token == "" {
 					level.Error(logger).Log(
-						"msg", ErrMissingHcloudToken,
+						"msg", "Missing required hcloud.token",
 					)
 
-					return ErrMissingHcloudToken
+					return errors.New("missing required hcloud.token")
 				}
 			}
 
 			if len(cfg.Target.Credentials) == 0 {
 				level.Error(logger).Log(
-					"msg", ErrMissingAnyCredentials,
+					"msg", "Missing any credentials",
 				)
 
-				return ErrMissingAnyCredentials
+				return errors.New("missing any credentials")
 			}
 
 			return action.Server(cfg, logger)

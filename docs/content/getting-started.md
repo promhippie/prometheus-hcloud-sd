@@ -44,7 +44,7 @@ Currently we have not prepared a deployment for Kubernetes, but this is somethin
 If you prefer to configure the service with environment variables you can see the available variables below, in case you want to configure multiple accounts with a single service you are forced to use the configuration file as the environment variables are limited to a single account. As the service is pretty lightweight you can even start an instance per account and configure it entirely by the variables, it's up to you.
 
 PROMETHEUS_HCLOUD_CONFIG
-: Path to HetznerCloud configuration file, optionally, required for muli credentials
+: Path to HetznerCloud configuration file, optionally, required for multi credentials
 
 PROMETHEUS_HCLOUD_TOKEN
 : Access token for the HetznerCloud API, required for authentication
@@ -73,25 +73,27 @@ Especially if you want to configure multiple accounts within a single service di
 
 ## Labels
 
-* `__meta_hcloud_name`
-* `__meta_hcloud_status`
-* `__meta_hcloud_public_ipv4`
-* `__meta_hcloud_public_ipv6`
-* `__meta_hcloud_type`
+* `__address__`
+* `__meta_hcloud_city`
 * `__meta_hcloud_cores`
-* `__meta_hcloud_memory`
-* `__meta_hcloud_disk`
-* `__meta_hcloud_storage`
+* `__meta_hcloud_country`
 * `__meta_hcloud_cpu`
 * `__meta_hcloud_datacenter`
-* `__meta_hcloud_location`
-* `__meta_hcloud_city`
-* `__meta_hcloud_country`
+* `__meta_hcloud_disk`
 * `__meta_hcloud_image_name`
 * `__meta_hcloud_image_type`
+* `__meta_hcloud_label_<label>`
+* `__meta_hcloud_location`
+* `__meta_hcloud_memory`
+* `__meta_hcloud_name`
 * `__meta_hcloud_os_flavor`
 * `__meta_hcloud_os_version`
-* `__meta_hcloud_label_<label>`
+* `__meta_hcloud_project`
+* `__meta_hcloud_public_ipv4`
+* `__meta_hcloud_public_ipv6`
+* `__meta_hcloud_status`
+* `__meta_hcloud_storage`
+* `__meta_hcloud_type`
 
 ## Metrics
 

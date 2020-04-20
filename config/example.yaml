@@ -1,3 +1,4 @@
+---
 server:
   addr: 0.0.0.0:9000
   path: /metrics
@@ -16,3 +17,5 @@ target:
     token: UhgX6TkZVGx7c94jPAff5cfJdyc9MLekiveDgN7Oq5dyOXxl4Uu9qkpcD1muILGW
   - project: example3
     token: aBgX6TkZVGx7c94jPAff5cfJdym9MLekivdDgN7Oq5dyOXxl4Uu9qkpcU1muILGW
+
+...

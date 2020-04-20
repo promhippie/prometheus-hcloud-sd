@@ -10,8 +10,9 @@ LABEL maintainer="Thomas Boerger <thomas@webhippie.de>" \
 
 ENTRYPOINT ["/usr/bin/prometheus-hcloud-sd"]
 CMD ["server"]
+HEALTHCHECK CMD ["/usr/bin/prometheus-hcloud-sd", "health"]
 
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /etc/mime.types /etc/
 
-COPY dist/binaries/prometheus-hcloud-sd-*-linux-arm64 /usr/bin/prometheus-hcloud-sd
+COPY bin/prometheus-hcloud-sd /usr/bin/prometheus-hcloud-sd

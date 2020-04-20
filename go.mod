@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/cespare/reflex v0.2.0 // indirect
-	github.com/go-chi/chi v4.1.0+incompatible
+	github.com/go-chi/chi v4.1.1+incompatible
 	github.com/go-kit/kit v0.10.0
 	github.com/haya14busa/goverage v0.0.0-20180129164344-eec3514a20b5 // indirect
 	github.com/hetznercloud/hcloud-go v1.17.0

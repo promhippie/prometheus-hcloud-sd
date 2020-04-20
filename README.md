@@ -19,24 +19,27 @@ You can download prebuilt binaries from our [GitHub releases](https://github.com
 
 The following list of meta labels can be used to relabel your scrape results entirely. Hopefully the names are self-explaining, that's why I have skipped a description for each label.
 
-* `__meta_hcloud_name`
-* `__meta_hcloud_status`
-* `__meta_hcloud_public_ipv4`
-* `__meta_hcloud_public_ipv6`
-* `__meta_hcloud_type`
+* `__address__`
+* `__meta_hcloud_city`
 * `__meta_hcloud_cores`
-* `__meta_hcloud_memory`
-* `__meta_hcloud_disk`
-* `__meta_hcloud_storage`
+* `__meta_hcloud_country`
 * `__meta_hcloud_cpu`
 * `__meta_hcloud_datacenter`
-* `__meta_hcloud_location`
-* `__meta_hcloud_city`
-* `__meta_hcloud_country`
+* `__meta_hcloud_disk`
 * `__meta_hcloud_image_name`
 * `__meta_hcloud_image_type`
+* `__meta_hcloud_label_<label>`
+* `__meta_hcloud_location`
+* `__meta_hcloud_memory`
+* `__meta_hcloud_name`
 * `__meta_hcloud_os_flavor`
 * `__meta_hcloud_os_version`
+* `__meta_hcloud_project`
+* `__meta_hcloud_public_ipv4`
+* `__meta_hcloud_public_ipv6`
+* `__meta_hcloud_status`
+* `__meta_hcloud_storage`
+* `__meta_hcloud_type`
 
 ### Prometheus config
 

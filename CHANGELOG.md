@@ -4,17 +4,17 @@ The following sections list the changes for unreleased.
 
 ## Summary
 
- * Chg #1337: Code and project restructuring
+ * Chg #13: Code and project restructuring
 
 ## Details
 
- * Change #1337: Code and project restructuring
+ * Change #13: Code and project restructuring
 
    To get the project and code structure into a new shape and to get it cleaned up we switched to Go
    modules and restructured the project source in general. The functionality stays the same as
    before.
 
-   https://github.com/promhippie/prometheus-hcloud-sd/pull/1337
+   https://github.com/promhippie/prometheus-hcloud-sd/pull/13
 
 
 # Changelog for 0.3.0

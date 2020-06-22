@@ -1,4 +1,4 @@
-description = 'Prometheus HetznerCloud SD'
+description = 'Prometheus Hetzner Cloud SD'
 
 def main(ctx):
   return [
@@ -194,6 +194,21 @@ def docker(ctx, arch):
       'arch': agent,
     },
     'steps': [
+      {
+        'name': 'version',
+        'image': 'webhippie/golang:1.14',
+        'pull': 'always',
+        'environment': environment,
+        'commands': [
+          'go env',
+        ],
+        'volumes': [
+          {
+            'name': 'gopath',
+            'path': '/srv/app',
+          },
+        ],
+      },
       {
         'name': 'generate',
         'image': 'webhippie/golang:1.14',

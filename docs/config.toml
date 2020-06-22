@@ -1,6 +1,6 @@
 baseURL = "https://promhippie.github.io/prometheus-hcloud-sd/"
 languageCode = "en-us"
-title = "Prometheus HetznerCloud SD"
+title = "Prometheus Hetzner Cloud SD"
 pygmentsUseClasses = true
 
 [blackfriday]
@@ -12,5 +12,5 @@ pygmentsUseClasses = true
 
 [params]
   author = "Thomas Boerger"
-  description = "Prometheus service discovery for HetznerCloud"
+  description = "Prometheus service discovery for Hetzner Cloud"
   keywords = "prometheus, sd, service, discovery, hetzner, cloud"

@@ -1,4 +1,4 @@
-# Prometheus HetznerCloud SD
+# Prometheus Hetzner Cloud SD
 
 [![Build Status](http://cloud.drone.io/api/badges/promhippie/prometheus-hcloud-sd/status.svg)](http://cloud.drone.io/promhippie/prometheus-hcloud-sd)
 [![Join the Matrix chat at https://matrix.to/#/#webhippie:matrix.org](https://img.shields.io/badge/matrix-%23webhippie-7bc9a4.svg)](https://matrix.to/#/#webhippie:matrix.org)
@@ -7,7 +7,7 @@
 [![Go Report](http://goreportcard.com/badge/github.com/promhippie/prometheus-hcloud-sd)](http://goreportcard.com/report/github.com/promhippie/prometheus-hcloud-sd)
 [![](https://images.microbadger.com/badges/image/promhippie/prometheus-hcloud-sd.svg)](http://microbadger.com/images/promhippie/prometheus-hcloud-sd "Get your own image badge on microbadger.com")
 
-This project provides a server to automatically discover nodes within your HetznerCloud account in a Prometheus SD compatible format.
+This project provides a server to automatically discover nodes within your Hetzner Cloud account in a Prometheus SD compatible format.
 
 ## Install
 

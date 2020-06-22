@@ -7,10 +7,10 @@
 		<meta name="viewport" content="width=device-width"/>
 
 		<title>
-			Prometheus HetznerCloud SD
+			Prometheus Hetzner Cloud SD
 		</title>
 
-		<meta name="description" content="Prometheus service discovery for HetznerCloud">
+		<meta name="description" content="Prometheus service discovery for Hetzner Cloud">
 		<meta name="author" content="Thomas Boerger">
 
 		<link rel="stylesheet" href="syntax.css" />
@@ -357,11 +357,11 @@
 		<section id="Menu">
 			<header>
 				<h1>
-					Prometheus HetznerCloud SD
+					Prometheus Hetzner Cloud SD
 				</h1>
 
 				<p>
-					Prometheus service discovery for HetznerCloud
+					Prometheus service discovery for Hetzner Cloud
 				</p>
 			</header>
 
@@ -402,23 +402,106 @@
 
 <p>First of all we need to prepare a configuration for <a href="https://prometheus.io">Prometheus</a> that includes the service discovery which simply maps to a node exporter.</p>
 
-<script type="application/javascript" src="//gist.github.com/tboerger/b9c39b6571f48ce2b132de1531061531.js?file=prometheus.yml"></script>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">global<span class="p">:</span><span class="w">
+</span><span class="w">  </span>scrape_interval<span class="p">:</span><span class="w"> </span>1m<span class="w">
+</span><span class="w">  </span>scrape_timeout<span class="p">:</span><span class="w"> </span>10s<span class="w">
+</span><span class="w">  </span>evaluation_interval<span class="p">:</span><span class="w"> </span>1m<span class="w">
+</span><span class="w">
+</span><span class="w"></span>scrape_configs<span class="p">:</span><span class="w">
+</span><span class="w"></span>-<span class="w"> </span>job_name<span class="p">:</span><span class="w"> </span>node<span class="w">
+</span><span class="w">  </span>file_sd_configs<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>files<span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;/etc/sd/hcloud.json&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="w">  </span>relabel_configs<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>source_labels<span class="p">:</span><span class="w"> </span><span class="p">[</span>__meta_hcloud_public_ipv4<span class="p">]</span><span class="w">
+</span><span class="w">    </span>replacement<span class="p">:</span><span class="w"> </span><span class="s2">&#34;${1}:9100&#34;</span><span class="w">
+</span><span class="w">    </span>target_label<span class="p">:</span><span class="w"> </span>__address__<span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>source_labels<span class="p">:</span><span class="w"> </span><span class="p">[</span>__meta_hcloud_datacenter<span class="p">]</span><span class="w">
+</span><span class="w">    </span>target_label<span class="p">:</span><span class="w"> </span>datacenter<span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>source_labels<span class="p">:</span><span class="w"> </span><span class="p">[</span>__meta_hcloud_name<span class="p">]</span><span class="w">
+</span><span class="w">    </span>target_label<span class="p">:</span><span class="w"> </span>instance<span class="w">
+</span><span class="w"></span>-<span class="w"> </span>job_name<span class="p">:</span><span class="w"> </span>hcloud-sd<span class="w">
+</span><span class="w">  </span>static_configs<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>targets<span class="p">:</span><span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>hcloud-sd<span class="p">:</span><span class="m">9000</span></code></pre></div>
 
 <p>After preparing the configuration we need to create the <code>docker-compose.yml</code> within the same folder, this <code>docker-compose.yml</code> starts a simple <a href="https://prometheus.io">Prometheus</a> instance together with the service discovery. Don&rsquo;t forget to update the envrionment variables with the required credentials. If you are using a different volume for the service discovery you have to make sure that the container user is allowed to write to this volume.</p>
 
-<script type="application/javascript" src="//gist.github.com/tboerger/b9c39b6571f48ce2b132de1531061531.js?file=docker-compose.yml"></script>
+<div class="highlight"><pre class="chroma"><code class="language-diff" data-lang="diff">version: &#39;2&#39;
+
+volumes:
+  prometheus:
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.6.0
+    restart: always
+    ports:
+      - 9090:9090
+    volumes:
+      - prometheus:/prometheus
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./service-discovery:/etc/sd
+
+  hcloud-exporter:
+    image: promhippie/prometheus-hcloud-sd:latest
+    restart: always
+    environment:
+      - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+      - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
+      - PROMETHEUS_HCLOUD_TOKEN=uDgX6TkZVGx7c94jPAff5cfJdym9MLekiveDgN7Oq5dyOXxl4Uu9qkpcC1muILGW
+    volumes:
+      - ./service-discovery:/etc/sd
+</code></pre></div>
 
 <p>Since our <code>latest</code> Docker tag always refers to the <code>master</code> branch of the Git repository you should always use some fixed version. You can see all available tags at our <a href="https://hub.docker.com/r/promhippie/prometheus-hcloud-sd/tags/">DockerHub repository</a>, there you will see that we also provide a manifest, you can easily start the exporter on various architectures without any change to the image name. You should apply a change like this to the <code>docker-compose.yml</code>:</p>
 
-<script type="application/javascript" src="//gist.github.com/tboerger/b9c39b6571f48ce2b132de1531061531.js?file=tag.diff"></script>
+<div class="highlight"><pre class="chroma"><code class="language-diff" data-lang="diff">  hcloud-exporter:
+<span class="gd">-   image: promhippie/prometheus-hcloud-sd:latest
+</span><span class="gd"></span><span class="gi">+   image: promhippie/prometheus-hcloud-sd:0.2.0
+</span><span class="gi"></span>    restart: always
+    environment:
+      - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+      - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
+      - PROMETHEUS_HCLOUD_TOKEN=uDgX6TkZVGx7c94jPAff5cfJdym9MLekiveDgN7Oq5dyOXxl4Uu9qkpcC1muILGW
+    volumes:
+      - ./service-discovery:/etc/sd
+</code></pre></div>
 
 <p>Depending on how you have launched and configured <a href="https://prometheus.io">Prometheus</a> it&rsquo;s possible that it&rsquo;s running as user <code>nobody</code>, in that case you should run the service discovery as this user as well, otherwise <a href="https://prometheus.io">Prometheus</a> won&rsquo;t be able to read the generated JSON file:</p>
 
-<script type="application/javascript" src="//gist.github.com/tboerger/b9c39b6571f48ce2b132de1531061531.js?file=userid.diff"></script>
+<div class="highlight"><pre class="chroma"><code class="language-diff" data-lang="diff">  hcloud-exporter:
+    image: promhippie/prometheus-hcloud-sd:latest
+    restart: always
+<span class="gi">+   user: &#39;65534&#39;
+</span><span class="gi"></span>    environment:
+      - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+      - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
+      - PROMETHEUS_HCLOUD_TOKEN=uDgX6TkZVGx7c94jPAff5cfJdym9MLekiveDgN7Oq5dyOXxl4Uu9qkpcC1muILGW
+    volumes:
+      - ./service-discovery:/etc/sd
+</code></pre></div>
 
 <p>Finally the service discovery should be configured fine, let&rsquo;s start this stack with <a href="https://docs.docker.com/compose/">docker-compose</a>, you just need to execute <code>docker-compose up</code> within the directory where you have stored <code>prometheus.yml</code> and <code>docker-compose.yml</code>.</p>
 
-<script type="application/javascript" src="//gist.github.com/tboerger/b9c39b6571f48ce2b132de1531061531.js?file=output.log"></script>
+<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt"># docker-compose up
+Creating network &#34;hcloud-sd_default&#34; with the default driver
+Creating volume &#34;hcloud-sd_prometheus&#34; with default driver
+Creating hcloud-sd_hcloud-sd_1  ... done
+Creating hcloud-sd_prometheus_1 ... done
+Attaching to hcloud-sd_hcloud-sd_1, hcloud-sd_prometheus_1
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5574151Z caller=main.go:238 msg=&#34;Starting Prometheus&#34; version=&#34;(version=2.4.3, branch=HEAD, revision=167a4b4e73a8eca8df648d2d2043e21bdb9a7449)&#34;
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5574847Z caller=main.go:239 build_context=&#34;(go=go1.11.1, user=root@1e42b46043e9, date=20181004-08:42:02)&#34;
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5575116Z caller=main.go:240 host_details=&#34;(Linux 4.9.93-linuxkit-aufs #1 SMP Wed Jun 6 16:55:56 UTC 2018 x86_64 14ae580d073a (none))&#34;
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5575347Z caller=main.go:241 fd_limits=&#34;(soft=1048576, hard=1048576)&#34;
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5575521Z caller=main.go:242 vm_limits=&#34;(soft=unlimited, hard=unlimited)&#34;
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5588845Z caller=main.go:554 msg=&#34;Starting TSDB ...&#34;
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5590007Z caller=web.go:397 component=web msg=&#34;Start listening for connections&#34; address=0.0.0.0:9090
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5639949Z caller=main.go:564 msg=&#34;TSDB started&#34;
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5640454Z caller=main.go:624 msg=&#34;Loading configuration file&#34; filename=/etc/prometheus/prometheus.yml
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5674651Z caller=main.go:650 msg=&#34;Completed loading of configuration file&#34; filename=/etc/prometheus/prometheus.yml
+prometheus_1  | level=info ts=2018-10-07T15:49:32.5675144Z caller=main.go:523 msg=&#34;Server is ready to receive web requests.&#34;
+hcloud-sd_1   | level=info ts=2018-10-07T15:49:32.5843003Z msg=&#34;Launching Prometheus HetznerCloud SD&#34; version=0.0.0-master revision=00c6143 date=20180924 go=go1.11
+hcloud-sd_1   | level=info ts=2018-10-07T15:49:32.5845589Z msg=&#34;Starting metrics server&#34; addr=0.0.0.0:9000</code></pre></div>
 
 <p>That&rsquo;s all, the service discovery should be up and running. You can access <a href="https://prometheus.io">Prometheus</a> at <a href="http://localhost:9090">http://localhost:9090</a>.</p>
 

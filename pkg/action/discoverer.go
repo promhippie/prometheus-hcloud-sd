@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/go-kit/kit/log"
@@ -35,6 +36,13 @@ const (
 	osFlavorLabel          = hcloudPrefix + "os_flavor"
 	osVersionLabel         = hcloudPrefix + "os_version"
 	labelPrefix            = hcloudPrefix + "label_"
+)
+
+var (
+	replacer = strings.NewReplacer(
+		".", "_",
+		"-", "_",
+	)
 )
 
 // Discoverer implements the Prometheus discoverer interface.
@@ -140,7 +148,7 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 			}
 
 			for key, value := range server.Labels {
-				target.Labels[model.LabelName(labelPrefix+key)] = model.LabelValue(value)
+				target.Labels[model.LabelName(normalizeLabel(labelPrefix+key))] = model.LabelValue(value)
 			}
 
 			level.Debug(d.logger).Log(
@@ -173,4 +181,8 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 
 	d.lasts = current
 	return targets, nil
+}
+
+func normalizeLabel(val string) string {
+	return replacer.Replace(val)
 }

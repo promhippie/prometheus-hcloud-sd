@@ -1,3 +1,38 @@
+# Changelog for unreleased
+
+The following sections list the changes for unreleased.
+
+## Summary
+
+ * Chg #19: Use bingo for development tooling
+ * Chg #20: Update Go version and dependencies
+ * Chg #21: Drop dariwn/386 release builds
+
+## Details
+
+ * Change #19: Use bingo for development tooling
+
+   We switched to use [bingo](github.com/bwplotka/bingo) for fetching development and build
+   tools based on fixed defined versions to reduce the dependencies listed within the regular
+   go.mod file within this project.
+
+   https://github.com/promhippie/prometheus-hcloud-sd/issues/19
+
+ * Change #20: Update Go version and dependencies
+
+   We updated the Go version used to build the binaries within the CI system and beside that in the
+   same step we have updated all dependencies ti keep everything up to date.
+
+   https://github.com/promhippie/prometheus-hcloud-sd/issues/20
+
+ * Change #21: Drop dariwn/386 release builds
+
+   We dropped the build of 386 builds on Darwin as this architecture is not supported by current Go
+   versions anymore.
+
+   https://github.com/promhippie/prometheus-hcloud-sd/issues/21
+
+
 # Changelog for 0.4.2
 
 The following sections list the changes for 0.4.2.

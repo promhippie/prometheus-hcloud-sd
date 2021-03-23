@@ -11,7 +11,7 @@ require (
 	github.com/joho/godotenv v1.3.0
 	github.com/oklog/run v1.1.0
 	github.com/prometheus/client_golang v1.9.0
-	github.com/prometheus/common v0.19.0
+	github.com/prometheus/common v0.20.0
 	github.com/prometheus/procfs v0.6.0 // indirect
 	github.com/prometheus/prometheus v1.8.2-0.20210217141258-a6be548dbc17
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect

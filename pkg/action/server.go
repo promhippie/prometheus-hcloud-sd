@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/v5"
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
 	"github.com/hetznercloud/hcloud-go/hcloud"

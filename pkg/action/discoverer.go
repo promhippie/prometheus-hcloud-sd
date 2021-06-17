@@ -14,31 +14,35 @@ import (
 	"github.com/prometheus/prometheus/discovery/targetgroup"
 )
 
-const (
-	hcloudPrefix           = model.MetaLabelPrefix + "hcloud_"
-	projectLabel           = hcloudPrefix + "project"
-	nameLabel              = hcloudPrefix + "name"
-	statusLabel            = hcloudPrefix + "status"
-	publicIPv4Label        = hcloudPrefix + "public_ipv4"
-	publicIPv6Label        = hcloudPrefix + "public_ipv6"
-	serverTypeNameLabel    = hcloudPrefix + "type"
-	serverTypeCoresLabel   = hcloudPrefix + "cores"
-	serverTypeMemoryLabel  = hcloudPrefix + "memory"
-	serverTypeDiskLabel    = hcloudPrefix + "disk"
-	serverTypeStorageLabel = hcloudPrefix + "storage"
-	serverTypeCPULabel     = hcloudPrefix + "cpu"
-	datacenterNameLabel    = hcloudPrefix + "datacenter"
-	locationNameLabel      = hcloudPrefix + "location"
-	locationCityLabel      = hcloudPrefix + "city"
-	locationCountryLabel   = hcloudPrefix + "country"
-	imageTypeLabel         = hcloudPrefix + "image_type"
-	imageNameLabel         = hcloudPrefix + "image_name"
-	osFlavorLabel          = hcloudPrefix + "os_flavor"
-	osVersionLabel         = hcloudPrefix + "os_version"
-	labelPrefix            = hcloudPrefix + "label_"
-)
-
 var (
+	// providerPrefix defines the general prefix for all labels.
+	providerPrefix = model.MetaLabelPrefix + "hcloud_"
+
+	// Labels defines all available labels for this provider.
+	Labels = map[string]string{
+		"datacenterName":    providerPrefix + "datacenter",
+		"imageName":         providerPrefix + "image_name",
+		"imageType":         providerPrefix + "image_type",
+		"labelPrefix":       providerPrefix + "label_",
+		"locationCity":      providerPrefix + "city",
+		"locationCountry":   providerPrefix + "country",
+		"locationName":      providerPrefix + "location",
+		"name":              providerPrefix + "name",
+		"osFlavor":          providerPrefix + "os_flavor",
+		"osVersion":         providerPrefix + "os_version",
+		"project":           providerPrefix + "project",
+		"publicIPv4":        providerPrefix + "public_ipv4",
+		"publicIPv6":        providerPrefix + "public_ipv6",
+		"serverTypeCores":   providerPrefix + "cores",
+		"serverTypeCPU":     providerPrefix + "cpu",
+		"serverTypeDisk":    providerPrefix + "disk",
+		"serverTypeMemory":  providerPrefix + "memory",
+		"serverTypeName":    providerPrefix + "type",
+		"serverTypeStorage": providerPrefix + "storage",
+		"status":            providerPrefix + "status",
+	}
+
+	// replacer defines a list of characters that gets replaced.
 	replacer = strings.NewReplacer(
 		".", "_",
 		"-", "_",
@@ -124,31 +128,31 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 					},
 				},
 				Labels: model.LabelSet{
-					model.AddressLabel:                      model.LabelValue(server.PublicNet.IPv4.IP.String()),
-					model.LabelName(projectLabel):           model.LabelValue(project),
-					model.LabelName(nameLabel):              model.LabelValue(server.Name),
-					model.LabelName(statusLabel):            model.LabelValue(server.Status),
-					model.LabelName(publicIPv4Label):        model.LabelValue(server.PublicNet.IPv4.IP.String()),
-					model.LabelName(publicIPv6Label):        model.LabelValue(server.PublicNet.IPv6.IP.String()),
-					model.LabelName(serverTypeNameLabel):    model.LabelValue(server.ServerType.Name),
-					model.LabelName(serverTypeCoresLabel):   model.LabelValue(strconv.Itoa(int(server.ServerType.Cores))),
-					model.LabelName(serverTypeMemoryLabel):  model.LabelValue(strconv.Itoa(int(server.ServerType.Memory))),
-					model.LabelName(serverTypeDiskLabel):    model.LabelValue(strconv.Itoa(int(server.ServerType.Disk))),
-					model.LabelName(serverTypeStorageLabel): model.LabelValue(server.ServerType.StorageType),
-					model.LabelName(serverTypeCPULabel):     model.LabelValue(server.ServerType.CPUType),
-					model.LabelName(datacenterNameLabel):    model.LabelValue(server.Datacenter.Name),
-					model.LabelName(locationNameLabel):      model.LabelValue(server.Datacenter.Location.Name),
-					model.LabelName(locationCityLabel):      model.LabelValue(server.Datacenter.Location.City),
-					model.LabelName(locationCountryLabel):   model.LabelValue(server.Datacenter.Location.Country),
-					model.LabelName(imageTypeLabel):         model.LabelValue(imageType),
-					model.LabelName(imageNameLabel):         model.LabelValue(imageName),
-					model.LabelName(osFlavorLabel):          model.LabelValue(osFlavor),
-					model.LabelName(osVersionLabel):         model.LabelValue(osVersion),
+					model.AddressLabel:                           model.LabelValue(server.PublicNet.IPv4.IP.String()),
+					model.LabelName(Labels["project"]):           model.LabelValue(project),
+					model.LabelName(Labels["name"]):              model.LabelValue(server.Name),
+					model.LabelName(Labels["status"]):            model.LabelValue(server.Status),
+					model.LabelName(Labels["publicIPv4"]):        model.LabelValue(server.PublicNet.IPv4.IP.String()),
+					model.LabelName(Labels["publicIPv6"]):        model.LabelValue(server.PublicNet.IPv6.IP.String()),
+					model.LabelName(Labels["serverTypeName"]):    model.LabelValue(server.ServerType.Name),
+					model.LabelName(Labels["serverTypeCores"]):   model.LabelValue(strconv.Itoa(int(server.ServerType.Cores))),
+					model.LabelName(Labels["serverTypeMemory"]):  model.LabelValue(strconv.Itoa(int(server.ServerType.Memory))),
+					model.LabelName(Labels["serverTypeDisk"]):    model.LabelValue(strconv.Itoa(int(server.ServerType.Disk))),
+					model.LabelName(Labels["serverTypeStorage"]): model.LabelValue(server.ServerType.StorageType),
+					model.LabelName(Labels["serverTypeCPU"]):     model.LabelValue(server.ServerType.CPUType),
+					model.LabelName(Labels["datacenterName"]):    model.LabelValue(server.Datacenter.Name),
+					model.LabelName(Labels["locationName"]):      model.LabelValue(server.Datacenter.Location.Name),
+					model.LabelName(Labels["locationCity"]):      model.LabelValue(server.Datacenter.Location.City),
+					model.LabelName(Labels["locationCountry"]):   model.LabelValue(server.Datacenter.Location.Country),
+					model.LabelName(Labels["imageType"]):         model.LabelValue(imageType),
+					model.LabelName(Labels["imageName"]):         model.LabelValue(imageName),
+					model.LabelName(Labels["osFlavor"]):          model.LabelValue(osFlavor),
+					model.LabelName(Labels["osVersion"]):         model.LabelValue(osVersion),
 				},
 			}
 
 			for key, value := range server.Labels {
-				target.Labels[model.LabelName(normalizeLabel(labelPrefix+key))] = model.LabelValue(value)
+				target.Labels[model.LabelName(normalizeLabel(Labels["labelPrefix"]+key))] = model.LabelValue(value)
 			}
 
 			level.Debug(d.logger).Log(

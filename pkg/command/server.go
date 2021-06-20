@@ -88,6 +88,20 @@ func ServerFlags(cfg *config.Config) []cli.Flag {
 			Destination: &cfg.Server.Path,
 		},
 		&cli.StringFlag{
+			Name:        "web.config",
+			Value:       "",
+			Usage:       "Path to web-config file",
+			EnvVars:     []string{"PROMETHEUS_HCLOUD_WEB_CONFIG"},
+			Destination: &cfg.Server.Web,
+		},
+		&cli.StringFlag{
+			Name:        "output.engine",
+			Value:       "file",
+			Usage:       "Enabled engine like file or http",
+			EnvVars:     []string{"PROMETHEUS_HCLOUD_OUTPUT_ENGINE"},
+			Destination: &cfg.Target.Engine,
+		},
+		&cli.StringFlag{
 			Name:        "output.file",
 			Value:       "/etc/prometheus/hcloud.json",
 			Usage:       "Path to write the file_sd config",

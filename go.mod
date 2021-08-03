@@ -5,7 +5,7 @@ go 1.15
 require (
 	github.com/cpuguy83/go-md2man/v2 v2.0.0 // indirect
 	github.com/go-chi/chi/v5 v5.0.3
-	github.com/go-kit/kit v0.10.0
+	github.com/go-kit/kit v0.11.0
 	github.com/hetznercloud/hcloud-go v1.29.0
 	github.com/joho/godotenv v1.3.0
 	github.com/oklog/run v1.1.0

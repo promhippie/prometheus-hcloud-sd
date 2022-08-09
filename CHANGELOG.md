@@ -1,3 +1,31 @@
+# Changelog for 0.6.0
+
+The following sections list the changes for 0.6.0.
+
+## Summary
+
+ * Enh #149: Use GitHub Actions onstead of Drone CI
+ * Enh #149: Improve doucmentation and repo structure
+
+## Details
+
+ * Enhancement #149: Use GitHub Actions onstead of Drone CI
+
+   We have replaced the previous Drone CI setup by more simple GitHub Actions since are anyway
+   using GitHub for the code hosting and issue tracking. As part of that we are now also publishing
+   the docker images to Quay.
+
+   https://github.com/promhippie/prometheus-hcloud-sd/pull/149
+
+ * Enhancement #149: Improve doucmentation and repo structure
+
+   We have improved the available documentation pretty hard and we also added documentation how
+   to install this service discovery via Helm or Kustomize on Kubernetes. Beside that we are
+   testing to build the bundled Kustomize manifests now.
+
+   https://github.com/promhippie/prometheus-hcloud-sd/pull/149
+
+
 # Changelog for 0.5.0
 
 The following sections list the changes for 0.5.0.

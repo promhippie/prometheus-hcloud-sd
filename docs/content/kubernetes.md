@@ -78,8 +78,8 @@ installation of [Helm][helm] you just need to execute the following commands:
 
 {{< highlight console >}}
 helm repo add promhippie https://promhippie.github.io/charts
-helm show values promhippie/prometheus-vcd-sd
-helm install prometheus-vcd-sd promhippie/prometheus-vcd-sd
+helm show values promhippie/prometheus-hcloud-sd
+helm install prometheus-hcloud-sd promhippie/prometheus-hcloud-sd
 {{< / highlight >}}
 
 You can also watch that available values and generally the details of the chart

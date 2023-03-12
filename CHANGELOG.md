@@ -33,9 +33,9 @@ The following sections list the changes for 0.5.0.
 ## Summary
 
  * Chg #19: Use bingo for development tooling
+ * Chg #21: Drop dariwn/386 release builds
  * Chg #44: Update Go version and dependencies
  * Chg #44: Improvements for automated documentation
- * Chg #21: Drop dariwn/386 release builds
  * Chg #45: Integrate new HTTP service discovery handler
  * Chg #46: Integrate standard web config
 
@@ -48,6 +48,13 @@ The following sections list the changes for 0.5.0.
    go.mod file within this project.
 
    https://github.com/promhippie/prometheus-hcloud-sd/issues/19
+
+ * Change #21: Drop dariwn/386 release builds
+
+   We dropped the build of 386 builds on Darwin as this architecture is not supported by current Go
+   versions anymore.
+
+   https://github.com/promhippie/prometheus-hcloud-sd/issues/21
 
  * Change #44: Update Go version and dependencies
 
@@ -63,13 +70,6 @@ The following sections list the changes for 0.5.0.
    need to update the docs related to that manually anymore.
 
    https://github.com/promhippie/prometheus-hcloud-sd/pull/44
-
- * Change #21: Drop dariwn/386 release builds
-
-   We dropped the build of 386 builds on Darwin as this architecture is not supported by current Go
-   versions anymore.
-
-   https://github.com/promhippie/prometheus-hcloud-sd/issues/21
 
  * Change #45: Integrate new HTTP service discovery handler
 
@@ -151,19 +151,26 @@ The following sections list the changes for 0.3.0.
 
 ## Summary
 
- * Chg #9: Define healthcheck command
- * Chg #6: Support for multiple accounts
- * Chg #5: Add support for server labels
  * Chg #4: Switch to cloud.drone.io
+ * Chg #5: Add support for server labels
+ * Chg #6: Support for multiple accounts
+ * Chg #9: Define healthcheck command
 
 ## Details
 
- * Change #9: Define healthcheck command
+ * Change #4: Switch to cloud.drone.io
 
-   To check the health status of the service discovery especially within Docker we added a simple
-   subcommand which checks the healthz endpoint to show if the service is up and running.
+   We don't wanted to maintain our own Drone infrastructure anymore, since there is
+   cloud.drone.io available for free we switched the pipelines over to it.
 
-   https://github.com/promhippie/prometheus-hcloud-sd/pull/9
+   https://github.com/promhippie/prometheus-hcloud-sd/pull/4
+
+ * Change #5: Add support for server labels
+
+   Since Hetzner Cloud introduced labels for servers we should also map these labels to the
+   exported JSON file.
+
+   https://github.com/promhippie/prometheus-hcloud-sd/pull/5
 
  * Change #6: Support for multiple accounts
 
@@ -173,19 +180,12 @@ The following sections list the changes for 0.3.0.
 
    https://github.com/promhippie/prometheus-hcloud-sd/pull/6
 
- * Change #5: Add support for server labels
+ * Change #9: Define healthcheck command
 
-   Since Hetzner Cloud introduced labels for servers we should also map these labels to the
-   exported JSON file.
+   To check the health status of the service discovery especially within Docker we added a simple
+   subcommand which checks the healthz endpoint to show if the service is up and running.
 
-   https://github.com/promhippie/prometheus-hcloud-sd/pull/5
-
- * Change #4: Switch to cloud.drone.io
-
-   We don't wanted to maintain our own Drone infrastructure anymore, since there is
-   cloud.drone.io available for free we switched the pipelines over to it.
-
-   https://github.com/promhippie/prometheus-hcloud-sd/pull/4
+   https://github.com/promhippie/prometheus-hcloud-sd/pull/9
 
 
 # Changelog for 0.2.0

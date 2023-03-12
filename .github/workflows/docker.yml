@@ -65,6 +65,7 @@ jobs:
             promhippie/prometheus-hcloud-sd
             quay.io/promhippie/prometheus-hcloud-sd
           labels: |
+            io.artifacthub.package.readme-url=https://raw.githubusercontent.com/promhippie/prometheus-hcloud-sd/master/README.md
             org.opencontainers.image.vendor=Webhippie
             maintainer=Thomas Boerger <thomas@webhippie.de>
           tags: |

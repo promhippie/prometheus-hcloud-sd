@@ -2,6 +2,7 @@ package action
 
 import (
 	"context"
+	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -39,9 +40,21 @@ func Server(cfg *config.Config, logger log.Logger) error {
 		clients := make(map[string]*hcloud.Client, len(cfg.Target.Credentials))
 
 		for _, credential := range cfg.Target.Credentials {
+			token, err := config.Value(credential.Token)
+
+			if err != nil {
+				level.Error(logger).Log(
+					"msg", "Failed to read token secret",
+					"project", credential.Project,
+					"err", err,
+				)
+
+				return fmt.Errorf("failed to read token secret for %s", credential.Project)
+			}
+
 			clients[credential.Project] = hcloud.NewClient(
 				hcloud.WithToken(
-					credential.Token,
+					token,
 				),
 			)
 		}

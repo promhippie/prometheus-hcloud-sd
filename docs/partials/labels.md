@@ -7,6 +7,7 @@
 * `__meta_hcloud_disk`
 * `__meta_hcloud_image_name`
 * `__meta_hcloud_image_type`
+* `__meta_hcloud_ipv4_<name>`
 * `__meta_hcloud_label_<name>`
 * `__meta_hcloud_location`
 * `__meta_hcloud_memory`

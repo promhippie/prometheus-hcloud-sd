@@ -31,6 +31,7 @@ var (
 		"osFlavor":          providerPrefix + "os_flavor",
 		"osVersion":         providerPrefix + "os_version",
 		"project":           providerPrefix + "project",
+		"privateIPv4":       providerPrefix + "ipv4_",
 		"publicIPv4":        providerPrefix + "public_ipv4",
 		"publicIPv6":        providerPrefix + "public_ipv6",
 		"serverTypeCores":   providerPrefix + "cores",
@@ -85,8 +86,21 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 	for project, client := range d.clients {
 
 		now := time.Now()
+
+		networks, err := client.Network.All(ctx)
+
+		if err != nil {
+			level.Warn(d.logger).Log(
+				"msg", "Failed to fetch networks",
+				"project", project,
+				"err", err,
+			)
+
+			requestFailures.WithLabelValues(project).Inc()
+			continue
+		}
+
 		servers, err := client.Server.All(ctx)
-		requestDuration.WithLabelValues(project).Observe(time.Since(now).Seconds())
 
 		if err != nil {
 			level.Warn(d.logger).Log(
@@ -98,6 +112,8 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 			requestFailures.WithLabelValues(project).Inc()
 			continue
 		}
+
+		requestDuration.WithLabelValues(project).Observe(time.Since(now).Seconds())
 
 		level.Debug(d.logger).Log(
 			"msg", "Requested servers",
@@ -155,6 +171,15 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 				target.Labels[model.LabelName(normalizeLabel(Labels["labelPrefix"]+key))] = model.LabelValue(value)
 			}
 
+			for _, priv := range server.PrivateNet {
+				for _, network := range networks {
+					if network.ID == priv.Network.ID {
+						target.Labels[model.LabelName(normalizeNetwork(Labels["privateIPv4"]+network.Name))] = model.LabelValue(priv.IP.String())
+						break
+					}
+				}
+			}
+
 			level.Debug(d.logger).Log(
 				"msg", "Server added",
 				"project", project,
@@ -188,5 +213,9 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 }
 
 func normalizeLabel(val string) string {
+	return replacer.Replace(val)
+}
+
+func normalizeNetwork(val string) string {
 	return replacer.Replace(val)
 }

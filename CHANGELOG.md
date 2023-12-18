@@ -1,3 +1,21 @@
+# Changelog for 1.1.0
+
+The following sections list the changes for 1.1.0.
+
+## Summary
+
+ * Enh #261: Add private IPs as labels
+
+## Details
+
+ * Enhancement #261: Add private IPs as labels
+
+   We have added a list of all attached private networks per server, that way you are now also able to
+   connect optionally through the private address instead of using the public address.
+
+   https://github.com/promhippie/prometheus-hcloud-sd/pull/261
+
+
 # Changelog for 1.0.0
 
 The following sections list the changes for 1.0.0.

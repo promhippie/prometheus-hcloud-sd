@@ -1,6 +1,6 @@
 .direnv
+.devenv
 coverage.out
-ab0x.go
 
 /bin
 /dist

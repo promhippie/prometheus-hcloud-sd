@@ -123,7 +123,7 @@ func Server(cfg *config.Config, logger log.Logger) error {
 			<-stop
 
 			return nil
-		}, func(err error) {
+		}, func(_ error) {
 			close(stop)
 		})
 	}
@@ -150,14 +150,14 @@ func handler(cfg *config.Config, logger log.Logger) *chi.Mux {
 			reg.ServeHTTP(w, r)
 		})
 
-		root.Get("/healthz", func(w http.ResponseWriter, r *http.Request) {
+		root.Get("/healthz", func(w http.ResponseWriter, _ *http.Request) {
 			w.Header().Set("Content-Type", "text/plain")
 			w.WriteHeader(http.StatusOK)
 
 			io.WriteString(w, http.StatusText(http.StatusOK))
 		})
 
-		root.Get("/readyz", func(w http.ResponseWriter, r *http.Request) {
+		root.Get("/readyz", func(w http.ResponseWriter, _ *http.Request) {
 			w.Header().Set("Content-Type", "text/plain")
 			w.WriteHeader(http.StatusOK)
 
@@ -165,7 +165,7 @@ func handler(cfg *config.Config, logger log.Logger) *chi.Mux {
 		})
 
 		if cfg.Target.Engine == "http" {
-			root.Get("/sd", func(w http.ResponseWriter, r *http.Request) {
+			root.Get("/sd", func(w http.ResponseWriter, _ *http.Request) {
 				w.Header().Set("Content-Type", "application/json; charset=utf-8")
 
 				content, err := os.ReadFile(cfg.Target.File)

@@ -3,12 +3,11 @@ package action
 import (
 	"context"
 	"fmt"
+	"log/slog"
 	"strconv"
 	"strings"
 	"time"
 
-	"github.com/go-kit/log"
-	"github.com/go-kit/log/level"
 	"github.com/hetznercloud/hcloud-go/v2/hcloud"
 	"github.com/prometheus/common/model"
 	"github.com/prometheus/prometheus/discovery/targetgroup"
@@ -53,7 +52,7 @@ var (
 // Discoverer implements the Prometheus discoverer interface.
 type Discoverer struct {
 	clients   map[string]*hcloud.Client
-	logger    log.Logger
+	logger    *slog.Logger
 	refresh   int
 	separator string
 	lasts     map[string]struct{}
@@ -90,8 +89,7 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 		networks, err := client.Network.All(ctx)
 
 		if err != nil {
-			level.Warn(d.logger).Log(
-				"msg", "Failed to fetch networks",
+			d.logger.Warn("Failed to fetch networks",
 				"project", project,
 				"err", err,
 			)
@@ -103,8 +101,7 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 		servers, err := client.Server.All(ctx)
 
 		if err != nil {
-			level.Warn(d.logger).Log(
-				"msg", "Failed to fetch servers",
+			d.logger.Warn("Failed to fetch servers",
 				"project", project,
 				"err", err,
 			)
@@ -115,8 +112,7 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 
 		requestDuration.WithLabelValues(project).Observe(time.Since(now).Seconds())
 
-		level.Debug(d.logger).Log(
-			"msg", "Requested servers",
+		d.logger.Debug("Requested servers",
 			"project", project,
 			"count", len(servers),
 		)
@@ -180,8 +176,7 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 				}
 			}
 
-			level.Debug(d.logger).Log(
-				"msg", "Server added",
+			d.logger.Debug("Server added",
 				"project", project,
 				"source", target.Source,
 			)
@@ -194,8 +189,7 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 
 	for k := range d.lasts {
 		if _, ok := current[k]; !ok {
-			level.Debug(d.logger).Log(
-				"msg", "Server deleted",
+			d.logger.Debug("Server deleted",
 				"source", k,
 			)
 

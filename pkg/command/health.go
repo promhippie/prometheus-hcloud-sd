@@ -1,6 +1,7 @@
 package command
 
 import (
+	"context"
 	"fmt"
 	"net/http"
 
@@ -14,11 +15,11 @@ func Health(cfg *config.Config) *cli.Command {
 		Name:  "health",
 		Usage: "Perform health checks",
 		Flags: HealthFlags(cfg),
-		Action: func(c *cli.Context) error {
+		Action: func(_ context.Context, cmd *cli.Command) error {
 			logger := setupLogger(cfg)
 
-			if c.IsSet("hcloud.config") {
-				if err := readConfig(c.String("hcloud.config"), cfg); err != nil {
+			if cmd.IsSet("hcloud.config") {
+				if err := readConfig(cmd.String("hcloud.config"), cfg); err != nil {
 					logger.Error("Failed to read config",
 						"err", err,
 					)
@@ -69,14 +70,14 @@ func HealthFlags(cfg *config.Config) []cli.Flag {
 			Name:        "web.address",
 			Value:       "0.0.0.0:9000",
 			Usage:       "Address to bind the metrics server",
-			EnvVars:     []string{"PROMETHEUS_HCLOUD_WEB_ADDRESS"},
+			Sources:     cli.EnvVars("PROMETHEUS_HCLOUD_WEB_ADDRESS"),
 			Destination: &cfg.Server.Addr,
 		},
 		&cli.StringFlag{
 			Name:        "hcloud.config",
 			Value:       "",
 			Usage:       "Path to HetznerCloud configuration file",
-			EnvVars:     []string{"PROMETHEUS_HCLOUD_CONFIG"},
+			Sources:     cli.EnvVars("PROMETHEUS_HCLOUD_CONFIG"),
 			Destination: nil,
 		},
 	}

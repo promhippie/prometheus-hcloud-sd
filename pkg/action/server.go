@@ -59,7 +59,7 @@ func Server(cfg *config.Config, logger *slog.Logger) error {
 		disc := Discoverer{
 			clients:   clients,
 			logger:    logger,
-			refresh:   int(cfg.Target.Refresh),
+			refresh:   cfg.Target.Refresh,
 			separator: ",",
 			lasts:     make(map[string]struct{}),
 		}

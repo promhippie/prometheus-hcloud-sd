@@ -1,0 +1,20 @@
+[Unit]
+Description=Prometheus Hetzner Cloud SD
+Documentation=https://promhippie.github.io/prometheus-hcloud-sd/
+
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+User=prometheus-hcloud-sd
+Group=prometheus-hcloud-sd
+EnvironmentFile=-/etc/default/prometheus-hcloud-sd
+EnvironmentFile=-/etc/sysconfig/prometheus-hcloud-sd
+ExecStart=/usr/bin/prometheus-hcloud-sd server $PROMETHEUS_HCLOUD_ARGS
+WorkingDirectory=/var/lib/prometheus-hcloud-sd
+Restart=always
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

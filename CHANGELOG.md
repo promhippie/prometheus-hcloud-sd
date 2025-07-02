@@ -184,6 +184,7 @@
 * update bingo deps and go version ([68388c6](https://github.com/promhippie/prometheus-hcloud-sd/commit/68388c629dcb5969ff251099eaa75f83d7b34c6d))
 * use correct types for envvar generator ([5662b7d](https://github.com/promhippie/prometheus-hcloud-sd/commit/5662b7d3f59303659a70cb9adc7979940af94cce))
 
+
 ## 1.1.0
 
 The following sections list the changes for 1.1.0.

@@ -85,7 +85,7 @@ like this to the `docker-compose.yml` file:
 {{< highlight diff >}}
   hcloud-sd:
 -   image: promhippie/prometheus-hcloud-sd:latest
-\+   image: promhippie/prometheus-hcloud-sd:2.0.0
++   image: promhippie/prometheus-hcloud-sd:x.x.x
     restart: always
     environment:
       - PROMETHEUS_HCLOUD_LOG_PRETTY=true

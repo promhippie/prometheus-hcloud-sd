@@ -29,8 +29,7 @@ jobs:
             conventional-changelog-conventionalcommits@6.1.0 \
             semantic-release@23.1.1 \
             @semantic-release/changelog \
-            @semantic-release/git \
-            semantic-release-replace-plugin
+            @semantic-release/git
 
       - name: Run releaser
         env:

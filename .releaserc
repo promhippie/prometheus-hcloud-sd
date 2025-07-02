@@ -111,36 +111,12 @@
             }
         ],
         [
-            "semantic-release-replace-plugin",
-            {
-                "replacements": [
-                    {
-                        "files": [
-                            "docs/content/usage.md"
-                        ],
-                        "from": "\\+   image: promhippie/prometheus-hcloud-sd:.*",
-                        "to": "\\+   image: promhippie/prometheus-hcloud-sd:${nextRelease.version}",
-                        "results": [
-                            {
-                                "file": "docs/content/usage.md",
-                                "hasChanged": true,
-                                "numMatches": 1,
-                                "numReplacements": 1
-                            }
-                        ],
-                        "countMatches": true
-                    }
-                ]
-            }
-        ],
-        [
             "@semantic-release/git",
             {
                 "message": "chore: release ${nextRelease.version}",
                 "assets": [
                     "CHANGELOG.md",
-                    ".github/RELEASE",
-                    "docs/content/usage.md"
+                    ".github/RELEASE"
                 ]
             }
         ]

@@ -474,8 +474,8 @@ architectures without any change to the image name. You should apply a change
 like this to the <code>docker-compose.yml</code> file:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">  hcloud-sd:
 </span></span><span class="line"><span class="cl"><span class="gd">-   image: promhippie/prometheus-hcloud-sd:latest
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span>\+   image: promhippie/prometheus-hcloud-sd:2.0.0
-</span></span><span class="line"><span class="cl">    restart: always
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+   image: promhippie/prometheus-hcloud-sd:x.x.x
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>    restart: always
 </span></span><span class="line"><span class="cl">    environment:
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_LOG_PRETTY=true
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file

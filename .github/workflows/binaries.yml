@@ -72,6 +72,7 @@ jobs:
           done
 
           for PACKAGE in dist/prometheus-hcloud-sd-*.rpm; do
+            [[ "${PACKAGE}" == *"armv6"* ]] && continue
             echo "> uploading $PACKAGE"
             curl  -sSL \
               --header "Authorization: Bearer $BALTOREPO_TOKEN" \

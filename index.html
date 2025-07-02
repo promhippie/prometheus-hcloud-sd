@@ -461,6 +461,7 @@ that the container user is allowed to write to this volume.</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PROMETHEUS_HCLOUD_LOG_PRETTY=true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PROMETHEUS_HCLOUD_TOKEN=your-token</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
@@ -477,6 +478,7 @@ like this to the <code>docker-compose.yml</code> file:</p>
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span>    restart: always
 </span></span><span class="line"><span class="cl">    environment:
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+</span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_TOKEN=your-token
 </span></span><span class="line"><span class="cl">    volumes:
@@ -492,6 +494,7 @@ be able to read the generated JSON file:</p>
 </span></span><span class="line"><span class="cl"><span class="gi">+   user: &#39;65534&#39;
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span>    environment:
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+</span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_TOKEN=your-token
 </span></span><span class="line"><span class="cl">    volumes:
@@ -507,6 +510,7 @@ config format look at the <a href="#web-configuration">documentation</a> section
 </span></span><span class="line"><span class="cl">    environment:
 </span></span><span class="line"><span class="cl"><span class="gi">+     - PROMETHEUS_HCLOUD_WEB_CONFIG=path/to/web-config.json
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span>      - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+</span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_TOKEN=your-token
 </span></span><span class="line"><span class="cl">    volumes:
@@ -522,7 +526,8 @@ service discovery:</p>
 </span></span><span class="line"><span class="cl">    restart: always
 </span></span><span class="line"><span class="cl">    environment:
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_LOG_PRETTY=true
-</span></span><span class="line"><span class="cl"><span class="gi">+     - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=http
+</span></span><span class="line"><span class="cl"><span class="gd">-     - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+     - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=http
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span>      - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
 </span></span><span class="line"><span class="cl">      - PROMETHEUS_HCLOUD_TOKEN=your-token
 </span></span><span class="line"><span class="cl">    volumes:

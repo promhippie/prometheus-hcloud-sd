@@ -68,6 +68,7 @@ services:
     restart: always
     environment:
       - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+      - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file
       - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
       - PROMETHEUS_HCLOUD_TOKEN=your-token
     volumes:
@@ -88,6 +89,7 @@ like this to the `docker-compose.yml` file:
     restart: always
     environment:
       - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+      - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file
       - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
       - PROMETHEUS_HCLOUD_TOKEN=your-token
     volumes:
@@ -106,6 +108,7 @@ be able to read the generated JSON file:
 +   user: '65534'
     environment:
       - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+      - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file
       - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
       - PROMETHEUS_HCLOUD_TOKEN=your-token
     volumes:
@@ -124,6 +127,7 @@ config format look at the [documentation](#web-configuration) section:
     environment:
 +     - PROMETHEUS_HCLOUD_WEB_CONFIG=path/to/web-config.json
       - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+      - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file
       - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
       - PROMETHEUS_HCLOUD_TOKEN=your-token
     volumes:
@@ -142,6 +146,7 @@ service discovery:
     restart: always
     environment:
       - PROMETHEUS_HCLOUD_LOG_PRETTY=true
+-     - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=file
 +     - PROMETHEUS_HCLOUD_OUTPUT_ENGINE=http
       - PROMETHEUS_HCLOUD_OUTPUT_FILE=/etc/sd/hcloud.json
       - PROMETHEUS_HCLOUD_TOKEN=your-token

@@ -118,8 +118,8 @@
                         "files": [
                             "docs/content/usage.md"
                         ],
-                        "from": "+   image: promhippie/prometheus-hcloud-sd:.*",
-                        "to": "+   image: promhippie/prometheus-hcloud-sd:${nextRelease.version}",
+                        "from": "\\+   image: promhippie/prometheus-hcloud-sd:.*",
+                        "to": "\\+   image: promhippie/prometheus-hcloud-sd:${nextRelease.version}",
                         "results": [
                             {
                                 "file": "docs/content/usage.md",

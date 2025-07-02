@@ -110,6 +110,12 @@
                 "changelogTitle": "# Changelog"
             }
         ],
+		[
+			"@semantic-release/github",
+			{
+				"assets": []
+			}
+		],
         [
             "@semantic-release/git",
             {

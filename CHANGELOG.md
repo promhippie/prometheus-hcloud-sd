@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.1.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.0.0...v2.1.0) (2025-07-14)
+
+
+### Features
+
+* **deps:** update module github.com/hetznercloud/hcloud-go/v2 to v2.22.0 ([8ae2bba](https://github.com/promhippie/prometheus-hcloud-sd/commit/8ae2bba964b037d3ff301341143176237c55b262))
+* **deps:** update module github.com/mgechev/revive to v1.11.0 ([8465ff5](https://github.com/promhippie/prometheus-hcloud-sd/commit/8465ff500baa3902e0f536402b1d097fde1b4cf8))
+
+
+### Bugfixes
+
+* **deps:** update golang docker tag to v1.24.5 ([d228bb8](https://github.com/promhippie/prometheus-hcloud-sd/commit/d228bb807974f0386588db1bb95d0cdfa2ec90a2))
+* **deps:** update module github.com/golangci/golangci-lint/v2 to v2.2.2 ([6ae39fc](https://github.com/promhippie/prometheus-hcloud-sd/commit/6ae39fc6229a1ba0abc9e76cc99e3f6c92ef9cf1))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([2082346](https://github.com/promhippie/prometheus-hcloud-sd/commit/2082346f8d82bafbc1322e6ea80e07c0be8c7164))
+
 ## [2.0.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v1.1.0...v2.0.0) (2025-07-02)
 
 

@@ -2,4 +2,4 @@
 set -e
 
 systemctl stop prometheus-hcloud-sd.service || true
-systemctl disable prometheus-hcloud-sdpi.service || true
+systemctl disable prometheus-hcloud-sd.service || true

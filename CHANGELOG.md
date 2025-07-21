@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.1.1](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.1.0...v2.1.1) (2025-07-21)
+
+
+### Bugfixes
+
+* use correct name for systemd service ([5cdeeba](https://github.com/promhippie/prometheus-hcloud-sd/commit/5cdeeba135245b33c5b1de2ba0c340b709406c24))
+
+
+### Miscellaneous
+
+* **deps:** update docker digests ([ab70a0d](https://github.com/promhippie/prometheus-hcloud-sd/commit/ab70a0de2ee77a21383f7af13540ec09943d3b54))
+* **deps:** update golang:1.24.5-alpine3.21 docker digest to 6edc205 ([fefdd32](https://github.com/promhippie/prometheus-hcloud-sd/commit/fefdd323af58b26c9a867e98537f6945b987a132))
+* **deps:** update golang:1.24.5-alpine3.21 docker digest to 72ff633 ([fa22756](https://github.com/promhippie/prometheus-hcloud-sd/commit/fa2275642834d055b52c6ec556d8cffd5c24e810))
+* **flake:** updated lockfile [skip ci] ([b69bb48](https://github.com/promhippie/prometheus-hcloud-sd/commit/b69bb483d82c7148125fca0ffa42d76d36ceded2))
+
 ## [2.1.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.0.0...v2.1.0) (2025-07-14)
 
 

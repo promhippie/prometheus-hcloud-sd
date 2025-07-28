@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.1.1...v2.2.0) (2025-07-28)
+
+
+### Features
+
+* **deps:** update module github.com/golangci/golangci-lint/v2 to v2.3.0 ([949890e](https://github.com/promhippie/prometheus-hcloud-sd/commit/949890ed995404119e266dd4cc3bbb5b82f0ef35))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([f47e9da](https://github.com/promhippie/prometheus-hcloud-sd/commit/f47e9dad28e31ec3bff5c4ac6ac78a4aedf211a8))
+
 ## [2.1.1](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.1.0...v2.1.1) (2025-07-21)
 
 

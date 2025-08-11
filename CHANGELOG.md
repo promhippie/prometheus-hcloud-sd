@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.2](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.1...v2.2.2) (2025-08-11)
+
+
+### Bugfixes
+
+* **deps:** update golang docker tag to v1.24.6 ([1d89f7f](https://github.com/promhippie/prometheus-hcloud-sd/commit/1d89f7fb17dea83625b201f24526390696a20b60))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([2c29d6d](https://github.com/promhippie/prometheus-hcloud-sd/commit/2c29d6d718d314ca0aa52a16692162d728448c4c))
+
 ## [2.2.1](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.0...v2.2.1) (2025-08-04)
 
 

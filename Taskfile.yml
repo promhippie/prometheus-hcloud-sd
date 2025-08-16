@@ -69,6 +69,8 @@ tasks:
           ./cmd/prometheus-hcloud-sd
     env:
       CGO_ENABLED: "0"
+      GOOS: "{{ .GOOS }}"
+      GOARCH: "{{ .GOARCH }}"
     vars:
       IMPORT: github.com/promhippie/prometheus-hcloud-sd
       VERSION:

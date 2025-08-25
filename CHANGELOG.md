@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.4](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.3...v2.2.4) (2025-08-25)
+
+
+### Bugfixes
+
+* **deps:** update module github.com/stretchr/testify to v1.11.0 ([6e3592b](https://github.com/promhippie/prometheus-hcloud-sd/commit/6e3592b0593c517102f317d69aa34027619e6c33))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([04eabc8](https://github.com/promhippie/prometheus-hcloud-sd/commit/04eabc80bf488afd05863a44214610a6be1517fc))
+
 ## [2.2.3](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.2...v2.2.3) (2025-08-18)
 
 

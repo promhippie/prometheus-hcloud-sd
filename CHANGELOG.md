@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.5](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.4...v2.2.5) (2025-09-01)
+
+
+### Bugfixes
+
+* **deps:** update module github.com/go-chi/chi/v5 to v5.2.3 ([4eb4e7d](https://github.com/promhippie/prometheus-hcloud-sd/commit/4eb4e7da38201b9295b3cf15bdddcbb7f72c397b))
+* **deps:** update module github.com/mgechev/revive to v1.12.0 ([c7bc2c1](https://github.com/promhippie/prometheus-hcloud-sd/commit/c7bc2c1ab657db9cbb6c3b77a4557d3a28d7c342))
+* **deps:** update module github.com/stretchr/testify to v1.11.1 ([29913bb](https://github.com/promhippie/prometheus-hcloud-sd/commit/29913bb5fe4609755d3459e702151adf22d1658e))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([b82b2a5](https://github.com/promhippie/prometheus-hcloud-sd/commit/b82b2a5f148e8ba0ceec98b58aa41dff4fa75a19))
+
 ## [2.2.4](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.3...v2.2.4) (2025-08-25)
 
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.6](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.5...v2.2.6) (2025-09-08)
+
+
+### Bugfixes
+
+* **deps:** update golang docker tag to v1.25.1 ([9a43362](https://github.com/promhippie/prometheus-hcloud-sd/commit/9a4336232c3ecfbf082627178feb0100dc99f7ba))
+* **deps:** update module github.com/prometheus/client_golang to v1.23.2 ([4759548](https://github.com/promhippie/prometheus-hcloud-sd/commit/475954865169595e31be760c561ca2b30be357ca))
+* **deps:** update module github.com/prometheus/exporter-toolkit to v0.14.1 ([2c2f1eb](https://github.com/promhippie/prometheus-hcloud-sd/commit/2c2f1eb798c2d4c9f708da469b48c75e5a85b4c2))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([6d39b95](https://github.com/promhippie/prometheus-hcloud-sd/commit/6d39b953af318a49331e8546acd643eb51988b54))
+
 ## [2.2.5](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.4...v2.2.5) (2025-09-01)
 
 

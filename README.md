@@ -1,6 +1,6 @@
 # Prometheus Hetzner Cloud SD
 
-[![Current Tag](https://img.shields.io/github/v/tag/promhippie/prometheus-hcloud-sd?sort=semver)](https://github.com/promhippie/prometheus-hcloud-sd) [![General Build](https://github.com/promhippie/prometheus-hcloud-sd/actions/workflows/general.yml/badge.svg)](https://github.com/promhippie/prometheus-hcloud-sd/actions/workflows/general.yaml) [![Join the Matrix chat at https://matrix.to/#/#webhippie:matrix.org](https://img.shields.io/badge/matrix-%23webhippie-7bc9a4.svg)](https://matrix.to/#/#webhippie:matrix.org) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/d7900c4c246740edb77cf29a4b1d85ee)](https://www.codacy.com/gh/promhippie/prometheus-hcloud-sd/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=promhippie/prometheus-hcloud-sd&amp;utm_campaign=Badge_Grade) [![Go Doc](https://godoc.org/github.com/promhippie/prometheus-hcloud-sd?status.svg)](http://godoc.org/github.com/promhippie/prometheus-hcloud-sd) [![Go Report](http://goreportcard.com/badge/github.com/promhippie/prometheus-hcloud-sd)](http://goreportcard.com/report/github.com/promhippie/prometheus-hcloud-sd)
+[![Current Tag](https://img.shields.io/github/v/tag/promhippie/prometheus-hcloud-sd?sort=semver)](https://github.com/promhippie/prometheus-hcloud-sd) [![General Build](https://github.com/promhippie/prometheus-hcloud-sd/actions/workflows/general.yml/badge.svg)](https://github.com/promhippie/prometheus-hcloud-sd/actions/workflows/general.yaml) [![Join the Matrix chat at https://matrix.to/#/#webhippie:matrix.org](https://img.shields.io/badge/matrix-%23webhippie-7bc9a4.svg)](https://matrix.to/#/#webhippie:matrix.org) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/d7900c4c246740edb77cf29a4b1d85ee)](https://www.codacy.com/gh/promhippie/prometheus-hcloud-sd/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=promhippie/prometheus-hcloud-sd&amp;utm_campaign=Badge_Grade) [![Go Doc](https://godoc.org/github.com/promhippie/prometheus-hcloud-sd?status.svg)](http://godoc.org/github.com/promhippie/prometheus-hcloud-sd) [![Go Report](http://goreportcard.com/badge/github.com/promhippie/prometheus-hcloud-sd)](http://goreportcard.com/report/github.com/promhippie/prometheus-hcloud-sd) [![Hosted By: Cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith&style=flat-square)](https://cloudsmith.com)
 
 This project provides a server to automatically discover nodes within your
 Hetzner Cloud account in a Prometheus SD compatible format.
@@ -8,10 +8,15 @@ Hetzner Cloud account in a Prometheus SD compatible format.
 ## Install
 
 You can download prebuilt binaries from our [GitHub releases][releases]. Besides
-that we also prepared repositories for DEB and RPM packages which can be  found
-at [Baltorepo][baltorepo]. If you prefer to use containers you could use our
+that we also prepared repositories for DEB and RPM packages which can be found
+at [Cloudsmith][pkgrepo]. If you prefer to use containers you could use our
 images published on [GHCR][ghcr], [Docker Hub][dockerhub] or [Quay][quayio]. If
 you need further guidance how to install this take a look at our [docs][docs].
+
+Package repository hosting is graciously provided by [Cloudsmith][cloudsmith].
+Cloudsmith is the only fully hosted, cloud-native, universal package management
+solution, that enables your organization to create, store and share packages in
+any format, to any place, with total confidence.
 
 ## Development
 
@@ -83,7 +88,8 @@ Copyright (c) 2018 Thomas Boerger <thomas@webhippie.de>
 ```
 
 [releases]: https://github.com/promhippie/prometheus-hcloud-sd/releases
-[baltorepo]: https://webhippie.baltorepo.com/promhippie/
+[pkgrepo]: https://cloudsmith.io/~webhippie/repos/promhippie/groups/
+[cloudsmith]: https://cloudsmith.com/
 [ghcr]: https://github.com/promhippie/prometheus-hcloud-sd/pkgs/container/prometheus-hcloud-sd
 [dockerhub]: https://hub.docker.com/r/promhippie/prometheus-hcloud-sd/tags/
 [quayio]: https://quay.io/repository/promhippie/prometheus-hcloud-sd?tab=tags

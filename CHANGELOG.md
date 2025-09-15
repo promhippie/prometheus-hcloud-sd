@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.2.7](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.6...v2.2.7) (2025-09-15)
+
+
+### Bugfixes
+
+* **deps:** update module github.com/hetznercloud/hcloud-go/v2 to v2.23.0 ([6a8a756](https://github.com/promhippie/prometheus-hcloud-sd/commit/6a8a75636aa838295b342e2f643e819c9a2c56f3))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([57464d1](https://github.com/promhippie/prometheus-hcloud-sd/commit/57464d1f4fed9b472bf9dee823f7aa809bcbf160))
+* move from baltorepo to cloudsmith ([80ed602](https://github.com/promhippie/prometheus-hcloud-sd/commit/80ed6023c5654987c24894ca7e52200adc5086f6))
+
 ## [2.2.6](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.5...v2.2.6) (2025-09-08)
 
 

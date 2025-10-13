@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.2.10](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.9...v2.2.10) (2025-10-13)
+
+
+### Bugfixes
+
+* **deps:** update alpine:3.22 docker digest to 4b7ce07 ([283f98a](https://github.com/promhippie/prometheus-hcloud-sd/commit/283f98a11964a0b9aecc693a77a1f85af140933e))
+* **deps:** update golang docker tag to v1.25.2 ([d9ee183](https://github.com/promhippie/prometheus-hcloud-sd/commit/d9ee183c97dae27810ddd77bafd408c30f3a5924))
+* **deps:** update golang:1.25.2-alpine3.21 docker digest to 0134653 ([a73c7b8](https://github.com/promhippie/prometheus-hcloud-sd/commit/a73c7b88bed9b0bc1d8411e2378652d152424f45))
+* **deps:** update golang:1.25.2-alpine3.21 docker digest to 0ae17b3 ([48e322f](https://github.com/promhippie/prometheus-hcloud-sd/commit/48e322f146c80657485280e55bf7e8232b6b3327))
+* **deps:** update golang:1.25.2-alpine3.21 docker digest to 7300a8d ([2f52e7c](https://github.com/promhippie/prometheus-hcloud-sd/commit/2f52e7cac5837d9bdef3f63fd55a5501f4a99f15))
+* **deps:** update module github.com/hetznercloud/hcloud-go/v2 to v2.26.0 ([481fec0](https://github.com/promhippie/prometheus-hcloud-sd/commit/481fec0c6af2495628d9a461ff07c1468cf8d56f))
+* **deps:** update module github.com/hetznercloud/hcloud-go/v2 to v2.27.0 ([15e4435](https://github.com/promhippie/prometheus-hcloud-sd/commit/15e4435e71d94d7f01ac2ec4305312f35b788efd))
+* **deps:** update module github.com/prometheus/common to v0.67.1 ([44e3955](https://github.com/promhippie/prometheus-hcloud-sd/commit/44e3955b350adcf413bd85025bae1e3366600198))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([e9a6029](https://github.com/promhippie/prometheus-hcloud-sd/commit/e9a60293ff94137e5e22096b561f5b03f1da0f1a))
+* **flake:** updated lockfile [skip ci] ([1bd0a74](https://github.com/promhippie/prometheus-hcloud-sd/commit/1bd0a7442093ac40862158757f8fca30e9cb0cb0))
+
 ## [2.2.9](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.8...v2.2.9) (2025-09-29)
 
 

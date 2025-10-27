@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.12](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.11...v2.2.12) (2025-10-27)
+
+
+### Bugfixes
+
+* **deps:** update module github.com/hetznercloud/hcloud-go/v2 to v2.28.0 ([d6154fa](https://github.com/promhippie/prometheus-hcloud-sd/commit/d6154fae1b55f3ea9190dabb4070293d6ca3e170))
+* **deps:** update module github.com/prometheus/exporter-toolkit to v0.15.0 ([e8e7100](https://github.com/promhippie/prometheus-hcloud-sd/commit/e8e7100500509f4e95be6cddc12ef275fe57a913))
+* **deps:** update module github.com/urfave/cli/v3 to v3.5.0 ([dc53816](https://github.com/promhippie/prometheus-hcloud-sd/commit/dc53816cea1f88f498e83421491ef9d615dd431b))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([09ffdf8](https://github.com/promhippie/prometheus-hcloud-sd/commit/09ffdf808ffc92ee206c6550e95e2614f0a7890a))
+
 ## [2.2.11](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.10...v2.2.11) (2025-10-20)
 
 

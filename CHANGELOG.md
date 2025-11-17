@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.15](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.14...v2.2.15) (2025-11-17)
+
+
+### Bugfixes
+
+* **deps:** update module github.com/golangci/golangci-lint/v2 to v2.6.2 ([1540534](https://github.com/promhippie/prometheus-hcloud-sd/commit/1540534c7d8f3f2402ea90b381fe41fd094234dc))
+* **deps:** update module github.com/hetznercloud/hcloud-go/v2 to v2.30.0 ([e6d650e](https://github.com/promhippie/prometheus-hcloud-sd/commit/e6d650e54625055a8e61b7d25f7148bd8433108f))
+* **deps:** update module github.com/urfave/cli/v3 to v3.6.1 ([837f11f](https://github.com/promhippie/prometheus-hcloud-sd/commit/837f11f67c0262153cdc2648a8df1155fb1883bb))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([d25cf12](https://github.com/promhippie/prometheus-hcloud-sd/commit/d25cf1215ed16f318e25a61cb0bc43aece152ab7))
+
 ## [2.2.14](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.13...v2.2.14) (2025-11-10)
 
 

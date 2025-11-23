@@ -22,6 +22,6 @@ secretGenerator:
 images:
   - name: prometheus-hcloud-sd
     newName: quay.io/promhippie/prometheus-hcloud-sd
-    newTag: latest@sha256:7c55dd69285821e8a3774bf8b8473f5d0e9a9e077e87ba4ae76aa2594fb58f63
+    newTag: latest@sha256:60ca10aa3a5ca7fbbde611e143212e3c74eb210b89afb0cad3d69a452bd3a4f8
 
 ...

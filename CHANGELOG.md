@@ -1,5 +1,37 @@
 # Changelog
 
+## [2.2.16](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.15...v2.2.16) (2025-11-24)
+
+
+### Bugfixes
+
+* **deps:** pin quay.io/promhippie/prometheus-hcloud-sd docker tag to f82ae2d ([c50701c](https://github.com/promhippie/prometheus-hcloud-sd/commit/c50701c364e83e07ded9d3ac8c026193cea60f7c))
+* **deps:** update module github.com/hetznercloud/hcloud-go/v2 to v2.31.0 ([0fc3363](https://github.com/promhippie/prometheus-hcloud-sd/commit/0fc3363b163c4631ac5ad98490840b29b3e22367))
+* **deps:** update module github.com/prometheus/common to v0.67.3 ([65fe637](https://github.com/promhippie/prometheus-hcloud-sd/commit/65fe637607d68ced639be27bf5cefc3d541cf601))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 0a15c19 ([7168c28](https://github.com/promhippie/prometheus-hcloud-sd/commit/7168c28cf15d12406b505d72b7daf2644f74de55))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 142ce8f ([41c4650](https://github.com/promhippie/prometheus-hcloud-sd/commit/41c465075a342478929aeb103268ba6c5010a131))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 1f89b81 ([1a8fd3a](https://github.com/promhippie/prometheus-hcloud-sd/commit/1a8fd3af10b85ddd910aaa415596781b19a6eeb8))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 2647c20 ([617db8c](https://github.com/promhippie/prometheus-hcloud-sd/commit/617db8cbf83810ecc03e166e9b08962b5b260d87))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 310acc8 ([2f3dfcb](https://github.com/promhippie/prometheus-hcloud-sd/commit/2f3dfcb465835945b3e6794f3255a326f322452f))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 38529f4 ([54ddad9](https://github.com/promhippie/prometheus-hcloud-sd/commit/54ddad9d478adc35c67b176660df5da2e9a48cf9))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 4555af3 ([aeb6396](https://github.com/promhippie/prometheus-hcloud-sd/commit/aeb6396239ecf1e537a2d814821d5cb729300d44))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 5559fdb ([94d6973](https://github.com/promhippie/prometheus-hcloud-sd/commit/94d6973e66ee2e8208e6500603ec67f77d87d751))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 60ca10a ([891d64b](https://github.com/promhippie/prometheus-hcloud-sd/commit/891d64bb91748df5011e4ae37c4a21b118dd63eb))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 79de972 ([68c08a8](https://github.com/promhippie/prometheus-hcloud-sd/commit/68c08a8af8f598ebd815de8f84f2f05ac1249546))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 7c55dd6 ([ffcc418](https://github.com/promhippie/prometheus-hcloud-sd/commit/ffcc418d62d44527f3bb7e96e32f1d15e4ed6ae1))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to c94e634 ([0dbd093](https://github.com/promhippie/prometheus-hcloud-sd/commit/0dbd0937946c0b7b596b186b8d6379647329d0e8))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to c968ca8 ([0571f04](https://github.com/promhippie/prometheus-hcloud-sd/commit/0571f04e8c944bda2bcbabd465c8f432c1796e0e))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to dd10b31 ([0ebd22a](https://github.com/promhippie/prometheus-hcloud-sd/commit/0ebd22aa86bd42e554139333a6dae55da08e1b42))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to e45c725 ([9f48fa8](https://github.com/promhippie/prometheus-hcloud-sd/commit/9f48fa84e03559d4000bcc05bfd217ce99b68652))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to f530f01 ([dc2b32f](https://github.com/promhippie/prometheus-hcloud-sd/commit/dc2b32f82d748dd451ec380b51ec92f9732469eb))
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to fc7bda7 ([c7c9349](https://github.com/promhippie/prometheus-hcloud-sd/commit/c7c934912fc4706d8f087e4ff9f5f0c442465e56))
+
+
+### Miscellaneous
+
+* **deps:** bump golang.org/x/crypto from 0.44.0 to 0.45.0 ([2054c0c](https://github.com/promhippie/prometheus-hcloud-sd/commit/2054c0caa395d5760090dd6b58a351a4cebdba37))
+* **flake:** updated lockfile [skip ci] ([55dd5c5](https://github.com/promhippie/prometheus-hcloud-sd/commit/55dd5c5b719f02b962b7915198b98cf6384788d4))
+
 ## [2.2.15](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.14...v2.2.15) (2025-11-17)
 
 

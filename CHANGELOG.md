@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.3.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.16...v2.3.0) (2025-12-01)
+
+
+### Features
+
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.32.0 ([463b0f7](https://github.com/promhippie/prometheus-hcloud-sd/commit/463b0f78332352610d1eafc394b7a64a010b2aab))
+
+
+### Bugfixes
+
+* **deps:** update quay.io/promhippie/prometheus-hcloud-sd:latest docker digest to 589ca4c ([5322e84](https://github.com/promhippie/prometheus-hcloud-sd/commit/5322e847ee456e9f27e2e70572ef987e250e47be))
+* **patch:** update module github.com/prometheus/common to v0.67.4 ([7b63de7](https://github.com/promhippie/prometheus-hcloud-sd/commit/7b63de7f196c2a2d06f8793efcfc54233c7080c8))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([7edb0a9](https://github.com/promhippie/prometheus-hcloud-sd/commit/7edb0a9096c9e3480f763c42e5d00fd5482239df))
+
 ## [2.2.16](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.15...v2.2.16) (2025-11-24)
 
 

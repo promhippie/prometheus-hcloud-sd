@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.4.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.3.0...v2.4.0) (2025-12-08)
+
+
+### Features
+
+* **minor:** update alpine docker tag to v3.23 ([#488](https://github.com/promhippie/prometheus-hcloud-sd/issues/488)) ([2e1779f](https://github.com/promhippie/prometheus-hcloud-sd/commit/2e1779fddbca7caab9439c38aa4d9f423d7d486d))
+
+
+### Bugfixes
+
+* **patch:** update golang docker tag to v1.25.5 ([#487](https://github.com/promhippie/prometheus-hcloud-sd/issues/487)) ([1fa2bc0](https://github.com/promhippie/prometheus-hcloud-sd/commit/1fa2bc026f94b7fbb831909401aaeaa899333d21))
+
+
+### Miscellaneous
+
+* drop issue and pull request template ([f84aa3f](https://github.com/promhippie/prometheus-hcloud-sd/commit/f84aa3f5179928d9c7345e60e24979a569903bd7))
+* **flake:** updated lockfile [skip ci] ([f96e3eb](https://github.com/promhippie/prometheus-hcloud-sd/commit/f96e3eb299426e0085b1c933c4199e759baa409f))
+* just format some yaml comment ([da4f5da](https://github.com/promhippie/prometheus-hcloud-sd/commit/da4f5dabd27c885e4097a07c2a7bacdd7882135b))
+
 ## [2.3.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.2.16...v2.3.0) (2025-12-01)
 
 

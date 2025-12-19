@@ -426,8 +426,8 @@ that includes the service discovery which simply maps to a node exporter.</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_public_ipv4]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">replacement</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${1}:9100&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">__address__</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_datacenter]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">datacenter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_location]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">location</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_name]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">instance</span><span class="w">
 </span></span></span><span class="line"><span class="cl">- <span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="l">hcloud-sd</span><span class="w">
@@ -543,8 +543,8 @@ service discovery:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_public_ipv4]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">replacement</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${1}:9100&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">__address__</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_datacenter]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">datacenter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_location]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">location</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_name]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">instance</span></span></span></code></pre></div>
 <p>Finally the service discovery should be configured fine, let&rsquo;s start this stack
@@ -606,7 +606,6 @@ options, they also include the default values.</p>
 <li><code>__meta_hcloud_cores</code></li>
 <li><code>__meta_hcloud_country</code></li>
 <li><code>__meta_hcloud_cpu</code></li>
-<li><code>__meta_hcloud_datacenter</code></li>
 <li><code>__meta_hcloud_disk</code></li>
 <li><code>__meta_hcloud_image_name</code></li>
 <li><code>__meta_hcloud_image_type</code></li>
@@ -692,8 +691,8 @@ your Prometheus configuration:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_public_ipv4]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">replacement</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${1}:9100&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">__address__</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_datacenter]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">datacenter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_location]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">location</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_name]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">instance</span></span></span></code></pre></div>
 <h3 id="helm">Helm</h3>
@@ -720,8 +719,8 @@ your Prometheus configuration:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_public_ipv4]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">replacement</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${1}:9100&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">__address__</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_datacenter]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">datacenter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_location]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">location</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source_labels</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">__meta_hcloud_name]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target_label</span><span class="p">:</span><span class="w"> </span><span class="l">instance</span></span></span></code></pre></div>
 

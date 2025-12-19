@@ -29,8 +29,8 @@ scrape_configs:
   - source_labels: [__meta_hcloud_public_ipv4]
     replacement: "${1}:9100"
     target_label: __address__
-  - source_labels: [__meta_hcloud_datacenter]
-    target_label: datacenter
+  - source_labels: [__meta_hcloud_location]
+    target_label: location
   - source_labels: [__meta_hcloud_name]
     target_label: instance
 - job_name: hcloud-sd
@@ -166,8 +166,8 @@ scrape_configs:
   - source_labels: [__meta_hcloud_public_ipv4]
     replacement: "${1}:9100"
     target_label: __address__
-  - source_labels: [__meta_hcloud_datacenter]
-    target_label: datacenter
+  - source_labels: [__meta_hcloud_location]
+    target_label: location
   - source_labels: [__meta_hcloud_name]
     target_label: instance
 {{< / highlight >}}

@@ -19,7 +19,6 @@ var (
 
 	// Labels defines all available labels for this provider.
 	Labels = map[string]string{
-		"datacenterName":    providerPrefix + "datacenter",
 		"imageName":         providerPrefix + "image_name",
 		"imageType":         providerPrefix + "image_type",
 		"labelPrefix":       providerPrefix + "label_",
@@ -152,10 +151,9 @@ func (d *Discoverer) getTargets(ctx context.Context) ([]*targetgroup.Group, erro
 					model.LabelName(Labels["serverTypeDisk"]):    model.LabelValue(strconv.Itoa(int(server.ServerType.Disk))),
 					model.LabelName(Labels["serverTypeStorage"]): model.LabelValue(server.ServerType.StorageType),
 					model.LabelName(Labels["serverTypeCPU"]):     model.LabelValue(server.ServerType.CPUType),
-					model.LabelName(Labels["datacenterName"]):    model.LabelValue(server.Datacenter.Name),
-					model.LabelName(Labels["locationName"]):      model.LabelValue(server.Datacenter.Location.Name),
-					model.LabelName(Labels["locationCity"]):      model.LabelValue(server.Datacenter.Location.City),
-					model.LabelName(Labels["locationCountry"]):   model.LabelValue(server.Datacenter.Location.Country),
+					model.LabelName(Labels["locationName"]):      model.LabelValue(server.Location.Name),
+					model.LabelName(Labels["locationCity"]):      model.LabelValue(server.Location.City),
+					model.LabelName(Labels["locationCountry"]):   model.LabelValue(server.Location.Country),
 					model.LabelName(Labels["imageType"]):         model.LabelValue(imageType),
 					model.LabelName(Labels["imageName"]):         model.LabelValue(imageName),
 					model.LabelName(Labels["osFlavor"]):          model.LabelValue(osFlavor),

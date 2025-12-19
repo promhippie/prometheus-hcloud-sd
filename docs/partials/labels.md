@@ -3,7 +3,6 @@
 * `__meta_hcloud_cores`
 * `__meta_hcloud_country`
 * `__meta_hcloud_cpu`
-* `__meta_hcloud_datacenter`
 * `__meta_hcloud_disk`
 * `__meta_hcloud_image_name`
 * `__meta_hcloud_image_type`

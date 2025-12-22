@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.5.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.4.0...v2.5.0) (2025-12-22)
+
+
+### Features
+
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.33.0 ([#500](https://github.com/promhippie/prometheus-hcloud-sd/issues/500)) ([e8c48f9](https://github.com/promhippie/prometheus-hcloud-sd/commit/e8c48f9a3460b2f9b2bba39e9771b4746ea9dca8))
+
+
+### Bugfixes
+
+* **deps:** update alpine:3.23 docker digest to 865b95f ([#498](https://github.com/promhippie/prometheus-hcloud-sd/issues/498)) ([fe83df4](https://github.com/promhippie/prometheus-hcloud-sd/commit/fe83df40d2222b5d88995ce5232583e9a21005d4))
+* **deps:** update alpine:3.23 docker digest to be171b5 ([#497](https://github.com/promhippie/prometheus-hcloud-sd/issues/497)) ([0ac8d21](https://github.com/promhippie/prometheus-hcloud-sd/commit/0ac8d21c312d550a8bdf5c292c82f9364b5fd739))
+
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([dbe84bb](https://github.com/promhippie/prometheus-hcloud-sd/commit/dbe84bba40798769ed451ddeee6847e1cf028526))
+* **flake:** updated lockfile [skip ci] ([88ea537](https://github.com/promhippie/prometheus-hcloud-sd/commit/88ea5372e54f12716c7718ea8177ba556a316d5d))
+
 ## [2.4.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.3.0...v2.4.0) (2025-12-08)
 
 

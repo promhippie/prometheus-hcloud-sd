@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setup nodejs
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+
       - name: Generate token
         id: token
         uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2

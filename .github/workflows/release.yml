@@ -36,12 +36,12 @@ jobs:
       - name: Install releaser
         run: |
           npm install -g \
-            conventional-changelog-conventionalcommits@6.1.0 \
-            semantic-release@23.1.1 \
+            semantic-release@25.0.2 \
             @semantic-release/changelog \
             @semantic-release/git \
             @semantic-release/github \
-            semantic-release-replace-plugin
+            semantic-release-replace-plugin \
+            conventional-changelog-conventionalcommits
 
       - name: Run releaser
         env:

@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.5.1](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.5.0...v2.5.1) (2026-01-05)
+
+### Bugfixes
+
+* **patch:** update module github.com/prometheus/exporter-toolkit to v0.15.1 ([#504](https://github.com/promhippie/prometheus-hcloud-sd/issues/504)) ([4bf9121](https://github.com/promhippie/prometheus-hcloud-sd/commit/4bf9121ee24bbdfda63362177b5cc07c00ab418e))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([a600ea8](https://github.com/promhippie/prometheus-hcloud-sd/commit/a600ea8fee3fb620d651ef1fadcde2fa0e4b0629))
+* **flake:** updated lockfile [skip ci] ([6ac1c96](https://github.com/promhippie/prometheus-hcloud-sd/commit/6ac1c96de5a25d6b56ea7f08e61fd6785bf83c7f))
+* **flake:** updated lockfile [skip ci] ([05f071f](https://github.com/promhippie/prometheus-hcloud-sd/commit/05f071f1c3ff05400741ba1a087b9dc7a0acff90))
+
 ## [2.5.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.4.0...v2.5.0) (2025-12-22)
 
 

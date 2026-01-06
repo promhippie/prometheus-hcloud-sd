@@ -57,26 +57,11 @@
                             "section": "Features"
                         },
                         {
-                            "type": "deps",
-                            "scope": "major",
-                            "section": "Features"
-                        },
-                        {
                             "type": "minor",
                             "section": "Features"
                         },
                         {
-                            "type": "deps",
-                            "scope": "minor",
-                            "section": "Features"
-                        },
-                        {
                             "type": "patch",
-                            "section": "Bugfixes"
-                        },
-                        {
-                            "type": "deps",
-                            "scope": "patch",
                             "section": "Bugfixes"
                         },
                         {
@@ -86,6 +71,10 @@
                         {
                             "type": "fix",
                             "section": "Bugfixes"
+                        },
+                        {
+                            "type": "deps",
+                            "section": "Dependencies"
                         },
                         {
                             "type": "chore",
@@ -134,12 +123,6 @@
             }
         ],
         [
-            "@semantic-release/github",
-            {
-                "assets": []
-            }
-        ],
-        [
             "@semantic-release/git",
             {
                 "message": "chore: release ${nextRelease.version}",
@@ -148,6 +131,12 @@
                     ".github/RELEASE",
                     "deploy/kubernetes/kustomization.yml"
                 ]
+            }
+        ],
+        [
+            "@semantic-release/github",
+            {
+                "assets": []
             }
         ]
     ]

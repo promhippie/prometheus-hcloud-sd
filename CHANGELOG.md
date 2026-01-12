@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.5.1...v2.6.0) (2026-01-12)
+
+### Dependencies
+
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.34.0 ([#508](https://github.com/promhippie/prometheus-hcloud-sd/issues/508)) ([4b30bce](https://github.com/promhippie/prometheus-hcloud-sd/commit/4b30bceda29621fb52af8df43238c97942675ec6))
+* **patch:** update module github.com/prometheus/common to v0.67.5 ([#507](https://github.com/promhippie/prometheus-hcloud-sd/issues/507)) ([13acd27](https://github.com/promhippie/prometheus-hcloud-sd/commit/13acd27321311d718395d356d11a69f96e9296ed))
+
 ## [2.5.1](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.5.0...v2.5.1) (2026-01-05)
 
 ### Bugfixes

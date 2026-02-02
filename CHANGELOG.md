@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.8.1](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.8.0...v2.8.1) (2026-02-02)
+
+### Bugfixes
+
+* **deps:** update alpine:3.23 docker digest to 2510918 ([#516](https://github.com/promhippie/prometheus-hcloud-sd/issues/516)) ([fe28236](https://github.com/promhippie/prometheus-hcloud-sd/commit/fe28236e2072fd2d6d232367072e60607ea9bc63))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([5114c5f](https://github.com/promhippie/prometheus-hcloud-sd/commit/5114c5f617799eaf247f196fb6458247af4e1c3f))
+
 ## [2.8.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.7.0...v2.8.0) (2026-01-26)
 
 ### Dependencies

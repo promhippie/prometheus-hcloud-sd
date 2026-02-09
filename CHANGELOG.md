@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.8.2](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.8.1...v2.8.2) (2026-02-09)
+
+### Dependencies
+
+* **patch:** update module github.com/go-chi/chi/v5 to v5.2.5 ([#518](https://github.com/promhippie/prometheus-hcloud-sd/issues/518)) ([b94fa84](https://github.com/promhippie/prometheus-hcloud-sd/commit/b94fa842581d008579c0d5b2da41065acd22af91))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([31b4741](https://github.com/promhippie/prometheus-hcloud-sd/commit/31b474198575d81426dd13cb17f877e7e2a5766b))
+
 ## [2.8.1](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.8.0...v2.8.1) (2026-02-02)
 
 ### Bugfixes

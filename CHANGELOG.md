@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.9.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.8.2...v2.9.0) (2026-03-02)
+
+### Dependencies
+
+* **minor:** update module github.com/urfave/cli/v3 to v3.7.0 ([#520](https://github.com/promhippie/prometheus-hcloud-sd/issues/520)) ([4096bbb](https://github.com/promhippie/prometheus-hcloud-sd/commit/4096bbb2261e719a30732196db32fc1a19e01005))
+
+### Miscellaneous
+
+* enable skip-package-name-collision-with-go-std for revive ([91fcdbb](https://github.com/promhippie/prometheus-hcloud-sd/commit/91fcdbb3f073436e7ad5e3366e6d39843bd5bf75))
+* **flake:** updated lockfile [skip ci] ([4d8d7c1](https://github.com/promhippie/prometheus-hcloud-sd/commit/4d8d7c1047a5a9bf83f729a2cb56dc949c45fc41))
+* **flake:** updated lockfile [skip ci] ([57ece95](https://github.com/promhippie/prometheus-hcloud-sd/commit/57ece95e7b3b198bfad01e1e05feb4231d4a8bfc))
+* **flake:** updated lockfile [skip ci] ([48b2f60](https://github.com/promhippie/prometheus-hcloud-sd/commit/48b2f6022af403bfa8b554b5fd6026f1c20acc73))
+* replace nixfmt package ([be63915](https://github.com/promhippie/prometheus-hcloud-sd/commit/be63915201b0f7994e7976b351116f37f4ae8c3c))
+
 ## [2.8.2](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.8.1...v2.8.2) (2026-02-09)
 
 ### Dependencies

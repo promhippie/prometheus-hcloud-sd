@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.14.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.13.0...v2.14.0) (2026-05-11)
+
+### Dependencies
+
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.40.0 ([#539](https://github.com/promhippie/prometheus-hcloud-sd/issues/539)) ([629c037](https://github.com/promhippie/prometheus-hcloud-sd/commit/629c037fe524c7add7e2c60c27cb0cbc214718f5))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([76dc90c](https://github.com/promhippie/prometheus-hcloud-sd/commit/76dc90cb7e648e0101e477aba8624fe8e5657870))
+
 ## [2.13.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.12.0...v2.13.0) (2026-05-04)
 
 ### Dependencies

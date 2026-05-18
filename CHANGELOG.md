@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.15.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.14.0...v2.15.0) (2026-05-18)
+
+### Dependencies
+
+* **minor:** update module github.com/urfave/cli/v3 to v3.9.0 ([#542](https://github.com/promhippie/prometheus-hcloud-sd/issues/542)) ([58a4992](https://github.com/promhippie/prometheus-hcloud-sd/commit/58a49929811563a48ba4411fe1d42010d3c5d97a))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([5fc1864](https://github.com/promhippie/prometheus-hcloud-sd/commit/5fc1864ff647d98ae58cd44616d3a658557bde08))
+
 ## [2.14.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.13.0...v2.14.0) (2026-05-11)
 
 ### Dependencies

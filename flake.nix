@@ -77,7 +77,7 @@
                 languages = {
                   go = {
                     enable = true;
-                    package = pkgs.go_1_25;
+                    package = pkgs.go_1_26;
                   };
                 };
 

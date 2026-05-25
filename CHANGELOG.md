@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.16.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.15.0...v2.16.0) (2026-05-25)
+
+### Features
+
+* upgrade required go version to 1.26 ([9d9f7d9](https://github.com/promhippie/prometheus-hcloud-sd/commit/9d9f7d9bee6d54cae2e51a266e16e490add004c4))
+
+### Bugfixes
+
+* **deps:** pin golang docker tag to 91eda97 ([#547](https://github.com/promhippie/prometheus-hcloud-sd/issues/547)) ([5d08e43](https://github.com/promhippie/prometheus-hcloud-sd/commit/5d08e4311cf587b725fabae074be5f73e6988fbd))
+* enforce 1.26.3 for docker image ([701f3ce](https://github.com/promhippie/prometheus-hcloud-sd/commit/701f3ce16c93bb1da83f233faa46902f3af45589))
+
+### Dependencies
+
+* **minor:** update module github.com/go-chi/chi/v5 to v5.3.0 ([#546](https://github.com/promhippie/prometheus-hcloud-sd/issues/546)) ([db69250](https://github.com/promhippie/prometheus-hcloud-sd/commit/db692508423d4f4c265fdd5d43fdcded27b2afc5))
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.41.0 ([#543](https://github.com/promhippie/prometheus-hcloud-sd/issues/543)) ([1ea25c8](https://github.com/promhippie/prometheus-hcloud-sd/commit/1ea25c8c79199d2a7dfc1adcc6fb56df36d6b1f9))
+* **patch:** update module github.com/hetznercloud/hcloud-go/v2 to v2.41.1 ([#544](https://github.com/promhippie/prometheus-hcloud-sd/issues/544)) ([d6026b5](https://github.com/promhippie/prometheus-hcloud-sd/commit/d6026b5f8995e2c86f487fbf737cdc1a57386887))
+* **patch:** update module github.com/hetznercloud/hcloud-go/v2 to v2.41.2 ([#545](https://github.com/promhippie/prometheus-hcloud-sd/issues/545)) ([2512ce4](https://github.com/promhippie/prometheus-hcloud-sd/commit/2512ce4b8f30ee3cb35d9d8122adebaa6820a998))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([21262eb](https://github.com/promhippie/prometheus-hcloud-sd/commit/21262eb9f9dacb2ed5a47d6b58a6ed45c03ca0cc))
+* switch flake input to 25.11 release ([be4768b](https://github.com/promhippie/prometheus-hcloud-sd/commit/be4768bbde8130d5294348bc90346b6ffa8d6bc4))
+
 ## [2.15.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.14.0...v2.15.0) (2026-05-18)
 
 ### Dependencies

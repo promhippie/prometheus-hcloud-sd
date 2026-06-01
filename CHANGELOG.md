@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.17.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.16.0...v2.17.0) (2026-06-01)
+
+### Dependencies
+
+* **minor:** update module github.com/prometheus/common to v0.68.0 ([#548](https://github.com/promhippie/prometheus-hcloud-sd/issues/548)) ([faff235](https://github.com/promhippie/prometheus-hcloud-sd/commit/faff235496f14ffe8ca4b0d4f6f88449fc57e373))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([4f9f2ed](https://github.com/promhippie/prometheus-hcloud-sd/commit/4f9f2ed0ef6ac35e8c73e8ee5bd4a966e14a3c0d))
+
 ## [2.16.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.15.0...v2.16.0) (2026-05-25)
 
 ### Features

@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.18.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.17.0...v2.18.0) (2026-06-08)
+
+### Bugfixes
+
+* **deps:** update docker digests ([#551](https://github.com/promhippie/prometheus-hcloud-sd/issues/551)) ([8d90e7b](https://github.com/promhippie/prometheus-hcloud-sd/commit/8d90e7ba219b5eecc7a252f081ccd6a4576a4247))
+
+### Dependencies
+
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.42.0 ([#549](https://github.com/promhippie/prometheus-hcloud-sd/issues/549)) ([4c56fc2](https://github.com/promhippie/prometheus-hcloud-sd/commit/4c56fc20c88afc7cecc54faddb57a14f885b6fac))
+* **patch:** update golang docker tag to v1.26.4 ([#550](https://github.com/promhippie/prometheus-hcloud-sd/issues/550)) ([ff45cc0](https://github.com/promhippie/prometheus-hcloud-sd/commit/ff45cc03c42d3dc7389cefac0847b21fe1d4eb2f))
+* **patch:** update module github.com/prometheus/common to v0.68.1 ([#552](https://github.com/promhippie/prometheus-hcloud-sd/issues/552)) ([1e5e0d5](https://github.com/promhippie/prometheus-hcloud-sd/commit/1e5e0d51673a54a1b628100e34d7db7f886cb31e))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([d34fef4](https://github.com/promhippie/prometheus-hcloud-sd/commit/d34fef4cd360a602969222f58ee24dc7d4c39039))
+
 ## [2.17.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.16.0...v2.17.0) (2026-06-01)
 
 ### Dependencies

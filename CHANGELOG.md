@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.19.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.18.0...v2.19.0) (2026-06-15)
+
+### Bugfixes
+
+* **deps:** update docker digests ([a808ee9](https://github.com/promhippie/prometheus-hcloud-sd/commit/a808ee91a2311d6e0e796597f56c090c87cc3164))
+* **deps:** update docker digests ([505c291](https://github.com/promhippie/prometheus-hcloud-sd/commit/505c2911adb440d09738bc7f3f2df3888388678c))
+* **deps:** update docker digests ([#557](https://github.com/promhippie/prometheus-hcloud-sd/issues/557)) ([4aed761](https://github.com/promhippie/prometheus-hcloud-sd/commit/4aed7612e7aac968f6e1bbcced76a9edcdc4b3b3))
+
+### Dependencies
+
+* **minor:** update alpine docker tag to v3.24 ([#553](https://github.com/promhippie/prometheus-hcloud-sd/issues/553)) ([24ed5be](https://github.com/promhippie/prometheus-hcloud-sd/commit/24ed5bebc12c9a38ab75b11129ae9815448d44e2))
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.43.0 ([#558](https://github.com/promhippie/prometheus-hcloud-sd/issues/558)) ([2004ba6](https://github.com/promhippie/prometheus-hcloud-sd/commit/2004ba65d1df20d59a88f8d9d7e540fc6a4d2972))
+* **minor:** update module github.com/urfave/cli/v3 to v3.10.0 ([#559](https://github.com/promhippie/prometheus-hcloud-sd/issues/559)) ([ed495eb](https://github.com/promhippie/prometheus-hcloud-sd/commit/ed495eb5d517c420ff453c7d2b00403c220b8414))
+* **patch:** update module github.com/urfave/cli/v3 to v3.9.1 ([#555](https://github.com/promhippie/prometheus-hcloud-sd/issues/555)) ([7a8606a](https://github.com/promhippie/prometheus-hcloud-sd/commit/7a8606a25c8bfd914d379356c75d27077d170ec8))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([ebda8af](https://github.com/promhippie/prometheus-hcloud-sd/commit/ebda8af2c69bc89399c0a3943c156060a727102b))
+
 ## [2.18.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.17.0...v2.18.0) (2026-06-08)
 
 ### Bugfixes

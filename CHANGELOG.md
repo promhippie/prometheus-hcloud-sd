@@ -1,5 +1,7 @@
 # Changelog
 
+## [2.23.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.22.0...v2.23.0) (2026-07-27)
+
 ## [2.22.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.21.0...v2.22.0) (2026-07-13)
 
 ## [2.21.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.20.1...v2.21.0) (2026-07-06)

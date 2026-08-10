@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.24.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.23.0...v2.24.0) (2026-08-10)
+
+### Features
+
+* restructure repo and build processes ([1ced423](https://github.com/promhippie/prometheus-hcloud-sd/commit/1ced4237530338a5f24ee5c037ae03d75a0ca0df))
+* upgrade prometheus library and change adapter call ([03afdfe](https://github.com/promhippie/prometheus-hcloud-sd/commit/03afdfe358ebc8cdff770c118da3e244b8a586dc))
+
+### Dependencies
+
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.21.0 ([#585](https://github.com/promhippie/prometheus-hcloud-sd/issues/585)) ([6966067](https://github.com/promhippie/prometheus-hcloud-sd/commit/6966067da754d49eb1301365b70815baba77d14c))
+* **minor:** update dependency golangci-lint to v2.12.2 ([#586](https://github.com/promhippie/prometheus-hcloud-sd/issues/586)) ([7e27825](https://github.com/promhippie/prometheus-hcloud-sd/commit/7e278254975a3235c85b01c8010abc455a874f88))
+* **patch:** update dependency cosign to v3.1.3 ([#587](https://github.com/promhippie/prometheus-hcloud-sd/issues/587)) ([3dbf160](https://github.com/promhippie/prometheus-hcloud-sd/commit/3dbf160e54d6c2652e6621d1bfc63c7843a683a5))
+
 ## [2.23.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.22.0...v2.23.0) (2026-07-27)
 
 ## [2.22.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.21.0...v2.22.0) (2026-07-13)

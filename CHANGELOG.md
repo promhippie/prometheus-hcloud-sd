@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.25.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.24.0...v2.25.0) (2026-08-17)
+
+### Bugfixes
+
+* **deps:** update golang:1.26.6-alpine docker digest to 3889b42 ([#596](https://github.com/promhippie/prometheus-hcloud-sd/issues/596)) ([39cc3d2](https://github.com/promhippie/prometheus-hcloud-sd/commit/39cc3d2d1d20ec1d76bce13cf6713c70390239e7))
+
+### Dependencies
+
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.22.0 ([#590](https://github.com/promhippie/prometheus-hcloud-sd/issues/590)) ([34ca3ee](https://github.com/promhippie/prometheus-hcloud-sd/commit/34ca3eea9298f51d9463b6a792a7cc9a4c69e00c))
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.23.0 ([#594](https://github.com/promhippie/prometheus-hcloud-sd/issues/594)) ([ee6c089](https://github.com/promhippie/prometheus-hcloud-sd/commit/ee6c089c83eacbc493dcc6cf4242e21f5b9346e9))
+* **minor:** update dependency hugo-extended to v0.165.0 ([#591](https://github.com/promhippie/prometheus-hcloud-sd/issues/591)) ([e7733b2](https://github.com/promhippie/prometheus-hcloud-sd/commit/e7733b27181642e51c441373f107e6cd3e697c78))
+* **minor:** update module github.com/urfave/cli/v3 to v3.11.0 ([#595](https://github.com/promhippie/prometheus-hcloud-sd/issues/595)) ([b106715](https://github.com/promhippie/prometheus-hcloud-sd/commit/b106715fbab32d2193e3c61f36280d1eba26a0b6))
+* **patch:** update dependency go to v1.26.6 ([#592](https://github.com/promhippie/prometheus-hcloud-sd/issues/592)) ([a4f8358](https://github.com/promhippie/prometheus-hcloud-sd/commit/a4f83587cffa9a3be03b7f3ca867b2ffd6de88d0))
+* **patch:** update dependency pre-commit to v4.6.2 ([#589](https://github.com/promhippie/prometheus-hcloud-sd/issues/589)) ([4886b34](https://github.com/promhippie/prometheus-hcloud-sd/commit/4886b34d8bba844f3e2230879f17eef24980eb4e))
+* **patch:** update golang docker tag to v1.26.6 ([#593](https://github.com/promhippie/prometheus-hcloud-sd/issues/593)) ([0b2c064](https://github.com/promhippie/prometheus-hcloud-sd/commit/0b2c064189072562f3d1a3e0a7ba8dfe607fc5dd))
+
 ## [2.24.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.23.0...v2.24.0) (2026-08-10)
 
 ### Features

@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.26.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.25.0...v2.26.0) (2026-08-24)
+
+### Dependencies
+
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.24.0 ([#598](https://github.com/promhippie/prometheus-hcloud-sd/issues/598)) ([c932d6c](https://github.com/promhippie/prometheus-hcloud-sd/commit/c932d6cf5b077ae1e1c856570398299283942018))
+* **minor:** update dependency golangci-lint to v2.13.0 ([#603](https://github.com/promhippie/prometheus-hcloud-sd/issues/603)) ([42eede5](https://github.com/promhippie/prometheus-hcloud-sd/commit/42eede58933b8d286a96d972f4e7fc0928823162))
+* **minor:** update dependency task to v3.53.1 ([#599](https://github.com/promhippie/prometheus-hcloud-sd/issues/599)) ([4d777b3](https://github.com/promhippie/prometheus-hcloud-sd/commit/4d777b321421c3dd8607183141905e63875eca98))
+* **minor:** update golang docker tag to v1.27.0 ([#602](https://github.com/promhippie/prometheus-hcloud-sd/issues/602)) ([6c7deaa](https://github.com/promhippie/prometheus-hcloud-sd/commit/6c7deaa2e903bb67547b852e5dd359763092ace7))
+* **minor:** update module github.com/stretchr/testify to v1.12.0 ([#597](https://github.com/promhippie/prometheus-hcloud-sd/issues/597)) ([fecf7a6](https://github.com/promhippie/prometheus-hcloud-sd/commit/fecf7a6e4a6674ee62872533384c95ee1a452475))
+* **patch:** update dependency golangci-lint to v2.13.1 ([#604](https://github.com/promhippie/prometheus-hcloud-sd/issues/604)) ([024b612](https://github.com/promhippie/prometheus-hcloud-sd/commit/024b612cd0c07cd9c3cf90309eaa4acac4c100e6))
+* **patch:** update module github.com/stretchr/testify to v1.12.1 ([#600](https://github.com/promhippie/prometheus-hcloud-sd/issues/600)) ([b6e3598](https://github.com/promhippie/prometheus-hcloud-sd/commit/b6e359803e7f902316bc5f611f37ee2dfdb73668))
+
 ## [2.25.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.24.0...v2.25.0) (2026-08-17)
 
 ### Bugfixes

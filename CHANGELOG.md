@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.27.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.26.0...v2.27.0) (2026-08-31)
+
+### Dependencies
+
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.25.0 ([#608](https://github.com/promhippie/prometheus-hcloud-sd/issues/608)) ([72a0ab2](https://github.com/promhippie/prometheus-hcloud-sd/commit/72a0ab2414818418ced2d0d6098bee64b5712ac0))
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.26.0 ([#610](https://github.com/promhippie/prometheus-hcloud-sd/issues/610)) ([c272adc](https://github.com/promhippie/prometheus-hcloud-sd/commit/c272adc6c71920fc8b113c9a9547feba8d54fe0d))
+* **minor:** update dependency go to v1.27.0 ([#601](https://github.com/promhippie/prometheus-hcloud-sd/issues/601)) ([9665a9a](https://github.com/promhippie/prometheus-hcloud-sd/commit/9665a9a58305f5c18d10096a92120dc1f75441b7))
+* **minor:** update dependency goreleaser to v2.18.0 ([#606](https://github.com/promhippie/prometheus-hcloud-sd/issues/606)) ([122f46b](https://github.com/promhippie/prometheus-hcloud-sd/commit/122f46b095d58edcdddc7104412ecef5315390c6))
+* **minor:** update module github.com/prometheus/common to v0.71.0 ([#612](https://github.com/promhippie/prometheus-hcloud-sd/issues/612)) ([bfd3d3c](https://github.com/promhippie/prometheus-hcloud-sd/commit/bfd3d3cefb9e1d52650c86d04ce5090e1007246c))
+* **minor:** update module github.com/prometheus/exporter-toolkit to v0.19.0 ([#609](https://github.com/promhippie/prometheus-hcloud-sd/issues/609)) ([fe5c3ce](https://github.com/promhippie/prometheus-hcloud-sd/commit/fe5c3cee36b5d4ee5facfece1adbea223fda7325))
+* **patch:** update dependency golangci-lint to v2.13.2 ([#611](https://github.com/promhippie/prometheus-hcloud-sd/issues/611)) ([c90fa84](https://github.com/promhippie/prometheus-hcloud-sd/commit/c90fa84794bb20e9be4cd054832863222a153fbc))
+* **patch:** update module github.com/go-chi/chi/v5 to v5.3.2 ([#605](https://github.com/promhippie/prometheus-hcloud-sd/issues/605)) ([fb03c9c](https://github.com/promhippie/prometheus-hcloud-sd/commit/fb03c9cb5f520e631762d5cad11041262de05b02))
+
 ## [2.26.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.25.0...v2.26.0) (2026-08-24)
 
 ### Dependencies

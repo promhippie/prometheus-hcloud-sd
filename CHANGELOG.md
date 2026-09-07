@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.27.1](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.27.0...v2.27.1) (2026-09-07)
+
+### Bugfixes
+
+* **deps:** update golang:1.27.1-alpine docker digest to cf6fca6 ([#616](https://github.com/promhippie/prometheus-hcloud-sd/issues/616)) ([cde4883](https://github.com/promhippie/prometheus-hcloud-sd/commit/cde4883b245532e1012cea403a74e6ec2d4e9a7b))
+
+### Dependencies
+
+* **patch:** update dependency go to v1.27.1 ([#614](https://github.com/promhippie/prometheus-hcloud-sd/issues/614)) ([38ce360](https://github.com/promhippie/prometheus-hcloud-sd/commit/38ce360e2dc66f6a4f3773a73b1ff8a04be2bb7c))
+* **patch:** update dependency goreleaser to v2.18.1 ([#617](https://github.com/promhippie/prometheus-hcloud-sd/issues/617)) ([e509d71](https://github.com/promhippie/prometheus-hcloud-sd/commit/e509d7192a78593d2f600db0a549bf71d0c7bff8))
+* **patch:** update golang docker tag to v1.27.1 ([#615](https://github.com/promhippie/prometheus-hcloud-sd/issues/615)) ([e88033e](https://github.com/promhippie/prometheus-hcloud-sd/commit/e88033ebc124861664c746d70ed92b7f13c5c1d4))
+
 ## [2.27.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.26.0...v2.27.0) (2026-08-31)
 
 ### Dependencies

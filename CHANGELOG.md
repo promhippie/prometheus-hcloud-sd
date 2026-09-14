@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.28.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.27.1...v2.28.0) (2026-09-14)
+
+### Dependencies
+
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.48.0 ([#620](https://github.com/promhippie/prometheus-hcloud-sd/issues/620)) ([c713a49](https://github.com/promhippie/prometheus-hcloud-sd/commit/c713a49e270d7cfce40499055f761101d560dfcb))
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.27.0 ([#618](https://github.com/promhippie/prometheus-hcloud-sd/issues/618)) ([fba07e9](https://github.com/promhippie/prometheus-hcloud-sd/commit/fba07e96cf163bfe58d44489df5136751473ca59))
+* **mise:** update dependency hugo-extended to v0.166.0 ([#619](https://github.com/promhippie/prometheus-hcloud-sd/issues/619)) ([1ed41f5](https://github.com/promhippie/prometheus-hcloud-sd/commit/1ed41f59c220bda44002b6ae64c25e5be3982718))
+* **mise:** update dependency prek to v0.5.3 ([#621](https://github.com/promhippie/prometheus-hcloud-sd/issues/621)) ([8f20e6c](https://github.com/promhippie/prometheus-hcloud-sd/commit/8f20e6c4bba818734ed048879a58a8e0f26e9c06))
+
 ## [2.27.1](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.27.0...v2.27.1) (2026-09-07)
 
 ### Bugfixes

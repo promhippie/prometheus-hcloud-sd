@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.30.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.29.0...v2.30.0) (2026-09-28)
+
+### Bugfixes
+
+* **deps:** update golang:1.27.1-alpine docker digest to 8a5910f ([#628](https://github.com/promhippie/prometheus-hcloud-sd/issues/628)) ([afbdb2e](https://github.com/promhippie/prometheus-hcloud-sd/commit/afbdb2e6315dc5937e7f446a46d9b01e6183b452))
+
+### Dependencies
+
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.49.0 ([#629](https://github.com/promhippie/prometheus-hcloud-sd/issues/629)) ([e9e9022](https://github.com/promhippie/prometheus-hcloud-sd/commit/e9e9022d34745d9f4851b0200f377d954230ccde))
+* **minor:** update module github.com/prometheus/exporter-toolkit to v0.20.0 ([#630](https://github.com/promhippie/prometheus-hcloud-sd/issues/630)) ([8437c44](https://github.com/promhippie/prometheus-hcloud-sd/commit/8437c44ca00c592aedce18c6d96b5f3897f9203b))
+* **mise:** update dependency golangci-lint to v2.14.0 ([#631](https://github.com/promhippie/prometheus-hcloud-sd/issues/631)) ([614a904](https://github.com/promhippie/prometheus-hcloud-sd/commit/614a904acf394201248811bbb645a8a104078d5c))
+* **mise:** update dependency prek to v0.5.4 ([#632](https://github.com/promhippie/prometheus-hcloud-sd/issues/632)) ([61daef3](https://github.com/promhippie/prometheus-hcloud-sd/commit/61daef332c489885e954ffd82f09503c1efd3482))
+
 ## [2.29.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.28.0...v2.29.0) (2026-09-21)
 
 ### Bugfixes

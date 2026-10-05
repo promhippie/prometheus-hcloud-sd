@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.31.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.30.0...v2.31.0) (2026-10-05)
+
+### Dependencies
+
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.50.0 ([#639](https://github.com/promhippie/prometheus-hcloud-sd/issues/639)) ([dd5d73a](https://github.com/promhippie/prometheus-hcloud-sd/commit/dd5d73a8eecb013184b89d0b1d33b40b6cfa46d9))
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.51.0 ([#641](https://github.com/promhippie/prometheus-hcloud-sd/issues/641)) ([f90c53f](https://github.com/promhippie/prometheus-hcloud-sd/commit/f90c53fdc01381a8b14aff4f8f138b10bf825201))
+* **minor:** update module github.com/prometheus/common to v0.72.0 ([#633](https://github.com/promhippie/prometheus-hcloud-sd/issues/633)) ([4f3d260](https://github.com/promhippie/prometheus-hcloud-sd/commit/4f3d260ab6896a8a2a0754b80da7cd4491afdd25))
+* **minor:** update module github.com/urfave/cli/v3 to v3.14.0 ([#638](https://github.com/promhippie/prometheus-hcloud-sd/issues/638)) ([c78b4f3](https://github.com/promhippie/prometheus-hcloud-sd/commit/c78b4f3bb050d74d0f07cd823a4580030fddafaf))
+* **mise:** update dependency hugo-extended to v0.167.0 ([#634](https://github.com/promhippie/prometheus-hcloud-sd/issues/634)) ([bc9bf5f](https://github.com/promhippie/prometheus-hcloud-sd/commit/bc9bf5f86c5d776cfefd72fbad6514dcd7d37cf2))
+* **mise:** update dependency task to v3.54.0 ([#637](https://github.com/promhippie/prometheus-hcloud-sd/issues/637)) ([dd1c151](https://github.com/promhippie/prometheus-hcloud-sd/commit/dd1c151b757ae96398213c4f6a26eafa6d1fd831))
+
 ## [2.30.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.29.0...v2.30.0) (2026-09-28)
 
 ### Bugfixes

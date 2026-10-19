@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.33.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.32.0...v2.33.0) (2026-10-19)
+
+### Dependencies
+
+* **minor:** update module github.com/go-chi/chi/v5 to v5.5.0 ([#653](https://github.com/promhippie/prometheus-hcloud-sd/issues/653)) ([c6c2dc8](https://github.com/promhippie/prometheus-hcloud-sd/commit/c6c2dc887b3c292060a5235b1136a30c212393dc))
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.29.0 ([#654](https://github.com/promhippie/prometheus-hcloud-sd/issues/654)) ([f6b1723](https://github.com/promhippie/prometheus-hcloud-sd/commit/f6b1723e284866d59ba7279953306a5a4ff24d2d))
+* **mise:** update dependency golangci-lint to v2.15.0 ([#655](https://github.com/promhippie/prometheus-hcloud-sd/issues/655)) ([b0cd412](https://github.com/promhippie/prometheus-hcloud-sd/commit/b0cd412b6745cac724c1b1278945ff82f560a136))
+* **mise:** update dependency hugo-extended to v0.168.0 ([#652](https://github.com/promhippie/prometheus-hcloud-sd/issues/652)) ([2c10365](https://github.com/promhippie/prometheus-hcloud-sd/commit/2c103650014c30a95d600ca190bca8f4822f7e76))
+* **mise:** update dependency prek to v0.5.6 ([#656](https://github.com/promhippie/prometheus-hcloud-sd/issues/656)) ([32e2983](https://github.com/promhippie/prometheus-hcloud-sd/commit/32e29838f67a4e689b030df8a67d9a7edbc27b0d))
+
 ## [2.32.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.31.0...v2.32.0) (2026-10-12)
 
 ### Bugfixes

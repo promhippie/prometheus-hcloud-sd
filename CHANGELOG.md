@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.34.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.33.0...v2.34.0) (2026-10-26)
+
+### Bugfixes
+
+* **deps:** update alpine:3.24 docker digest to 71e9b7b ([#664](https://github.com/promhippie/prometheus-hcloud-sd/issues/664)) ([f4d20e5](https://github.com/promhippie/prometheus-hcloud-sd/commit/f4d20e5331cea897961cce0099f61e25b2905532))
+* **deps:** update alpine:3.24 docker digest to c6b073f ([#662](https://github.com/promhippie/prometheus-hcloud-sd/issues/662)) ([952476e](https://github.com/promhippie/prometheus-hcloud-sd/commit/952476e28ec0a626ca8d687c91447c5348bd3a08))
+* **deps:** update golang:1.27.3-alpine docker digest to b8c9b82 ([#665](https://github.com/promhippie/prometheus-hcloud-sd/issues/665)) ([285676c](https://github.com/promhippie/prometheus-hcloud-sd/commit/285676c568cb379e0cf398de3b52985f53abf869))
+* **deps:** update golang:1.27.3-alpine docker digest to d530cf6 ([#663](https://github.com/promhippie/prometheus-hcloud-sd/issues/663)) ([1d81ef7](https://github.com/promhippie/prometheus-hcloud-sd/commit/1d81ef78d2dff07f1aafad47769e769f078e092c))
+
+### Dependencies
+
+* **minor:** update module github.com/hetznercloud/hcloud-go/v2 to v2.53.0 ([#666](https://github.com/promhippie/prometheus-hcloud-sd/issues/666)) ([52ba3a9](https://github.com/promhippie/prometheus-hcloud-sd/commit/52ba3a99838383c28da2d1e2329f19bd82105c85))
+* **mise:** update dependency cosign to v3.1.4 ([#658](https://github.com/promhippie/prometheus-hcloud-sd/issues/658)) ([5a94fe8](https://github.com/promhippie/prometheus-hcloud-sd/commit/5a94fe839f7305b5f4a86614f6dbca351c781f93))
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.30.0 ([#667](https://github.com/promhippie/prometheus-hcloud-sd/issues/667)) ([2d25c1d](https://github.com/promhippie/prometheus-hcloud-sd/commit/2d25c1d46c7ded63cbea15ecbfda561da555ccf7))
+* **mise:** update dependency go to v1.27.3 ([#659](https://github.com/promhippie/prometheus-hcloud-sd/issues/659)) ([a4c7469](https://github.com/promhippie/prometheus-hcloud-sd/commit/a4c7469a3e008c2264a674fb182feb700e38972a))
+* **mise:** update dependency goreleaser to v2.19.0 ([#668](https://github.com/promhippie/prometheus-hcloud-sd/issues/668)) ([6455279](https://github.com/promhippie/prometheus-hcloud-sd/commit/6455279f4aff8a6b4094d27aa950f63a440bb2c4))
+* **mise:** update dependency prek to v0.5.7 ([#661](https://github.com/promhippie/prometheus-hcloud-sd/issues/661)) ([20e2b42](https://github.com/promhippie/prometheus-hcloud-sd/commit/20e2b42212d8c16daf4dbf6f6f34b9baaa139a74))
+* **patch:** update golang docker tag to v1.27.3 ([#660](https://github.com/promhippie/prometheus-hcloud-sd/issues/660)) ([2bed1dc](https://github.com/promhippie/prometheus-hcloud-sd/commit/2bed1dc9a7916acc8c699f3ccb8613900829cf38))
+
 ## [2.33.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.32.0...v2.33.0) (2026-10-19)
 
 ### Dependencies

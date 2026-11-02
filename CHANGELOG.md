@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.35.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.34.0...v2.35.0) (2026-11-02)
+
+### Bugfixes
+
+* **deps:** update golang:1.27.3-alpine docker digest to d200d2d ([#669](https://github.com/promhippie/prometheus-hcloud-sd/issues/669)) ([6ec8622](https://github.com/promhippie/prometheus-hcloud-sd/commit/6ec86223aecf7a4c49bb3ea073b538378f99b2a1))
+
+### Dependencies
+
+* **minor:** update module github.com/prometheus/common to v0.73.0 ([#672](https://github.com/promhippie/prometheus-hcloud-sd/issues/672)) ([e8e1aa4](https://github.com/promhippie/prometheus-hcloud-sd/commit/e8e1aa4cc58dee76f69222840caf600191c7dc01))
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.30.1 ([#671](https://github.com/promhippie/prometheus-hcloud-sd/issues/671)) ([759a5e5](https://github.com/promhippie/prometheus-hcloud-sd/commit/759a5e557bbef4f0459be23192d1dfeda54c6cfb))
+* **mise:** update dependency hugo-extended to v0.169.0 ([#670](https://github.com/promhippie/prometheus-hcloud-sd/issues/670)) ([2659ce0](https://github.com/promhippie/prometheus-hcloud-sd/commit/2659ce04af27f022658ed4ca70c30a997dbcd35b))
+* **mise:** update dependency prek to v0.5.9 ([#673](https://github.com/promhippie/prometheus-hcloud-sd/issues/673)) ([cc56e0a](https://github.com/promhippie/prometheus-hcloud-sd/commit/cc56e0a0ab68207bb047cb873fdfe87836566e45))
+* **patch:** update module github.com/prometheus/common to v0.73.1 ([#674](https://github.com/promhippie/prometheus-hcloud-sd/issues/674)) ([11012fa](https://github.com/promhippie/prometheus-hcloud-sd/commit/11012face7fb41d62836ab7eb2c21aa63cf7e1eb))
+
 ## [2.34.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.33.0...v2.34.0) (2026-10-26)
 
 ### Bugfixes

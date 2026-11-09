@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.35.1](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.35.0...v2.35.1) (2026-11-09)
+
+### Bugfixes
+
+* **deps:** update alpine:3.24 docker digest to f59abe6 ([#679](https://github.com/promhippie/prometheus-hcloud-sd/issues/679)) ([a92ee62](https://github.com/promhippie/prometheus-hcloud-sd/commit/a92ee627330b029d97675452683f78a925af30c6))
+* **deps:** update docker digests ([#677](https://github.com/promhippie/prometheus-hcloud-sd/issues/677)) ([8147ad7](https://github.com/promhippie/prometheus-hcloud-sd/commit/8147ad7b84b5330f603a76fad3e1498e64819970))
+* **deps:** update docker digests ([#678](https://github.com/promhippie/prometheus-hcloud-sd/issues/678)) ([b4a9341](https://github.com/promhippie/prometheus-hcloud-sd/commit/b4a934191ad58f116921b4a7022faf41405f2c20))
+
+### Dependencies
+
+* **mise:** update dependency goreleaser to v2.20.0 ([#676](https://github.com/promhippie/prometheus-hcloud-sd/issues/676)) ([5bb76ca](https://github.com/promhippie/prometheus-hcloud-sd/commit/5bb76caec204469f615d527ac68afc728c8441c8))
+* **mise:** update dependency prek to v0.5.10 ([#675](https://github.com/promhippie/prometheus-hcloud-sd/issues/675)) ([64bd189](https://github.com/promhippie/prometheus-hcloud-sd/commit/64bd189e08080982cc4e88937973aa78401947c8))
+
 ## [2.35.0](https://github.com/promhippie/prometheus-hcloud-sd/compare/v2.34.0...v2.35.0) (2026-11-02)
 
 ### Bugfixes
